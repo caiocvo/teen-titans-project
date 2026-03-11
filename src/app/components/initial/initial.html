@@ -1,1 +1,36 @@
+<div class="principal">
+  <div class="principal-section">
+    <a
+      class="hero-btn starfire"
+      (mouseenter)="changeText('Estelar', 'Uma princesa alienígena com poderes incríveis.')"
+      (mouseleave)="resetText()"
+    ></a>
+    <a
+      class="hero-btn raven"
+      (mouseenter)="changeText('Ravena', 'Uma poderosa empata com habilidades místicas.')"
+      (mouseleave)="resetText()"
+    ></a>
+    <a
+      class="hero-btn robin"
+      (mouseenter)="changeText('Robin', 'O líder estratégico dos Titãs e mestre em combate.')"
+      (mouseleave)="resetText()"
+    ></a>
+    <a
+      class="hero-btn cyborg"
+      (mouseenter)="
+        changeText('Cyborg', 'Um homem meio máquina meio humano com um grande coração.')
+      "
+      (mouseleave)="resetText()"
+    ></a>
+    <a
+      class="hero-btn beastboy"
+      (mouseenter)="changeText('Mutano', 'Um metamorfo habilidoso que se transforma em animais.')"
+      (mouseleave)="resetText()"
+    ></a>
+  </div>
 
+  <div class="principal-text">
+    <p class="principal-text title">{{ title }}</p>
+    <p class="principal-text ph">{{ paragraph }}</p>
+  </div>
+</div>
