@@ -1,4 +1,8 @@
 <div class="principal">
+  <div class="principal-text">
+    <p class="title">{{ title }}</p>
+    <p class="ph">{{ paragraph }}</p>
+  </div>
   <div class="principal-section">
     <a
       class="hero-btn starfire"
@@ -27,10 +31,5 @@
       (mouseenter)="changeText('Mutano', 'Um metamorfo habilidoso que se transforma em animais.')"
       (mouseleave)="resetText()"
     ></a>
-  </div>
-
-  <div class="principal-text">
-    <p class="principal-text title">{{ title }}</p>
-    <p class="principal-text ph">{{ paragraph }}</p>
   </div>
 </div>
