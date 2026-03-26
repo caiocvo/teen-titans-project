@@ -1,35 +1,44 @@
-<div class="principal">
-  <div class="principal-text">
-    <p class="title">{{ title }}</p>
-    <p class="ph">{{ paragraph }}</p>
+<div
+  class="hero"
+  [ngStyle]="{
+    background:
+      'linear-gradient(135deg, #000 0%, #000 20%, transparent 52%),' +
+      'linear-gradient(45deg, #000 0%, #000 20%, transparent 40%),' +
+      personagemAtivo.corPrincipal,
+  }"
+>
+  <div class="hero-visual">
+    <img
+      class="sombra"
+      [src]="personagemAtivo.imgSombra"
+      [ngStyle]="{
+        width: personagemAtivo.width + 'px',
+        bottom: personagemAtivo.bottom + 'px',
+        right: personagemAtivo.right + 'px',
+      }"
+    />
+
+    <img
+      class="personagem"
+      [src]="personagemAtivo.img"
+      [ngStyle]="{
+        width: personagemAtivo.width + 'px',
+        bottom: personagemAtivo.bottom + 'px',
+        right: personagemAtivo.right + 'px',
+      }"
+    />
   </div>
-  <div class="principal-section">
-    <a
-      class="hero-btn starfire"
-      (mouseenter)="changeText('Estelar', 'Uma princesa alienígena com poderes incríveis.')"
-      (mouseleave)="resetText()"
-    ></a>
-    <a
-      class="hero-btn raven"
-      (mouseenter)="changeText('Ravena', 'Uma poderosa empata com habilidades místicas.')"
-      (mouseleave)="resetText()"
-    ></a>
-    <a
-      class="hero-btn robin"
-      (mouseenter)="changeText('Robin', 'O líder estratégico dos Titãs e mestre em combate.')"
-      (mouseleave)="resetText()"
-    ></a>
-    <a
-      class="hero-btn cyborg"
-      (mouseenter)="
-        changeText('Cyborg', 'Um homem meio máquina meio humano com um grande coração.')
-      "
-      (mouseleave)="resetText()"
-    ></a>
-    <a
-      class="hero-btn beastboy"
-      (mouseenter)="changeText('Mutano', 'Um metamorfo habilidoso que se transforma em animais.')"
-      (mouseleave)="resetText()"
-    ></a>
+
+  <div class="hero-text">
+    <p class="title">{{ personagemAtivo.nome }}</p>
+    <p class="ph">{{ personagemAtivo.descricao }}</p>
+  </div>
+
+  <div class="hero-section">
+    <a class="hero-btn starfire" (mouseenter)="personagemAtivo = personagens[0]"></a>
+    <a class="hero-btn raven" (mouseenter)="personagemAtivo = personagens[1]"></a>
+    <a class="hero-btn robin" (mouseenter)="personagemAtivo = personagens[2]"></a>
+    <a class="hero-btn cyborg" (mouseenter)="personagemAtivo = personagens[4]"></a>
+    <a class="hero-btn beastboy" (mouseenter)="personagemAtivo = personagens[3]"></a>
   </div>
 </div>

@@ -1,4 +1,4 @@
-.principal {
+.hero {
   animation: bgMove 17s ease-in-out infinite alternate;
   min-height: 100vh;
   background:
@@ -11,8 +11,37 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  .hero-visual {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    pointer-events: none; /* MUITO IMPORTANTE */
+  }
 
-  .principal-text {
+  /* PERSONAGEM */
+  .personagem {
+    margin-top: 0px !important;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+  }
+
+  /* SOMBRA */
+  .sombra {
+    position: absolute;
+    width: clamp(350px, 40vw, 600px);
+    opacity: 0.6;
+    filter: blur(10px);
+    transform: translate(40px, 40px); /* ajusta aqui */
+    z-index: 1;
+    transition: all 0.3s ease;
+  }
+  .hero-text {
     margin-top: 5px;
     backdrop-filter: blur(6px);
     background: rgba(0, 0, 0, 0.3);
@@ -36,7 +65,8 @@
     }
   }
 
-  .principal-section {
+  .hero-section {
+    z-index: 4;
     display: flex;
     gap: 40px;
     flex-wrap: wrap;
