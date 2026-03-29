@@ -17,9 +17,9 @@ export class Initial {
       imgSombra: 'backgrounds/shadows/sombra.estelar.png',
       corPrincipal: '#D84800',
       corSecundaria: '#6E1F00',
-      width: 520,
-      bottom: -420,
-      right: 20,
+      width: 500,
+      top: 8,
+      right: 40,
     },
     //RAVENA
     {
@@ -30,7 +30,7 @@ export class Initial {
       corPrincipal: '#0D0055',
       corSecundaria: '#05001F',
       width: 520,
-      bottom: 0,
+      top: 8,
       right: 30,
     },
     {
@@ -42,19 +42,19 @@ export class Initial {
       corPrincipal: '#5D0000',
       corSecundaria: '#420000',
       width: 600,
-      bottom: 200,
+      top: -5,
       right: 100,
     },
     //MUTANO
     {
-      nome: 'Beastboy',
+      nome: 'Mutano',
       descricao: 'Um metamorfo habilidoso que se transforma em animais.',
       img: '/backgrounds/characters/beastboy.webp',
       imgSombra: '/backgrounds/shadows/sombra.mutano.png',
       corPrincipal: '#0B4400',
       corSecundaria: '#051C00',
       width: 520,
-      bottom: 0,
+      top: 8,
       right: 80,
     },
     //CYBORG
@@ -66,7 +66,7 @@ export class Initial {
       corPrincipal: '#004798',
       corSecundaria: '#003A7C',
       width: 520,
-      bottom: 0,
+      top: 8,
       right: 90,
     },
   ];

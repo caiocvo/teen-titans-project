@@ -11,6 +11,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+
   .hero-visual {
     position: absolute;
     right: 0;
@@ -20,31 +22,23 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    pointer-events: none; /* MUITO IMPORTANTE */
+    pointer-events: none;
   }
 
-  /* PERSONAGEM */
   .personagem {
-    margin-top: 0px !important;
-    position: relative;
+    position: absolute;
     z-index: 2;
-    transition: all 0.3s ease;
+    margin-right: 4%;
   }
 
-  /* SOMBRA */
   .sombra {
     position: absolute;
     width: clamp(350px, 40vw, 600px);
-    opacity: 0.6;
-    filter: blur(10px);
-    transform: translate(40px, 40px); /* ajusta aqui */
+    opacity: 0.4;
     z-index: 1;
-    transition: all 0.3s ease;
   }
   .hero-text {
-    margin-top: 5px;
-    backdrop-filter: blur(6px);
-    background: rgba(0, 0, 0, 0.3);
+    margin-top: 5%;
     padding: 30px;
     border-radius: 12px;
     position: absolute;
@@ -57,11 +51,10 @@
     margin-left: 10px;
     color: rgba(255, 255, 255, 0.693);
     .title {
-      overflow-wrap: break-word;
-      font-size: 50px;
+      font-size: 30vh;
     }
     .ph {
-      font-size: 35px;
+      font-size: 30px;
     }
   }
 
@@ -72,6 +65,12 @@
     flex-wrap: wrap;
     margin-top: auto;
     margin-bottom: 90px;
+    background-color: black;
+    opacity: 0.9;
+    /* ADICIONE ISTO: Sombra preta suave */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Deslocamento y, difusão, cor preta com 50% de opacidade */
+    border-radius: 12px; // Combine com o raio dos botões para harmonia
+    padding: 15px;
 
     .hero-btn {
       border-radius: 10px;
@@ -82,19 +81,25 @@
       background-position: center 1%;
 
       &.starfire {
-        background-image: url('/imgs.home/estelar.jpg');
+        background-image: url('/backgrounds/icons/starfire-icon.png');
+        background-color: #d6520f;
       }
       &.raven {
-        background-image: url('/imgs.home/ravena.jpg');
+        background-image: url('/backgrounds/icons/raven-icon.png');
+        background-color: #1d0c7d;
+        background-position: left 7%;
       }
       &.robin {
-        background-image: url('/imgs.home/robin.jpg');
+        background-image: url('/backgrounds/icons/robin-icon.png');
+        background-color: #7a0909;
       }
       &.beastboy {
-        background-image: url('/imgs.home/mutano.jpg');
+        background-image: url('/backgrounds/icons/beastboy-icon.png');
+        background-color: #207e0d;
       }
       &.cyborg {
-        background-image: url('/imgs.home/cyborg.jpg');
+        background-image: url('/backgrounds/icons/cyborg-icon.png');
+        background-color: #1359a9;
       }
     }
     .hero-btn:hover {
