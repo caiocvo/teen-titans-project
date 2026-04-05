@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input, ViewChild, ElementRef, NgZone } from '@angular/core';
 
 @Component({
   selector: 'app-initial',
@@ -8,6 +8,8 @@ import { Component, Input } from '@angular/core';
   styleUrl: './initial.scss',
 })
 export class Initial {
+  constructor(private ngZone: NgZone) {}
+
   personagens = [
     //ESTELAR
     {
@@ -71,4 +73,24 @@ export class Initial {
     },
   ];
   personagemAtivo = this.personagens[2]; //Robin default
+
+  @ViewChild('flashRef') flashRef!: ElementRef;
+  @ViewChild('heroRef') heroRef!: ElementRef;
+
+  private flashTimeout: any;
+
+  trocarPersonagem(index: number) {
+    if (this.personagens[index] === this.personagemAtivo) return;
+
+    const flash = this.flashRef.nativeElement;
+
+    // Troca IMEDIATO
+    this.personagemAtivo = this.personagens[index];
+
+    // Flash por cima
+    flash.classList.remove('active');
+    requestAnimationFrame(() => {
+      flash.classList.add('active');
+    });
+  }
 }
