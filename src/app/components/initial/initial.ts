@@ -8,8 +8,6 @@ import { Component, Input, ViewChild, ElementRef, NgZone } from '@angular/core';
   styleUrl: './initial.scss',
 })
 export class Initial {
-  constructor(private ngZone: NgZone) {}
-
   personagens = [
     //ESTELAR
     {
@@ -29,8 +27,8 @@ export class Initial {
       descricao: 'Uma poderosa empata com habilidades místicas.',
       img: '/backgrounds/characters/raven.webp',
       imgSombra: '/backgrounds/shadows/sombra.ravena.png',
-      corPrincipal: '#0D0055',
-      corSecundaria: '#05001F',
+      corPrincipal: '#210776',
+      corSecundaria: '#0f044a',
       width: 520,
       top: 8,
       right: 30,
@@ -43,9 +41,9 @@ export class Initial {
       imgSombra: '/backgrounds/shadows/sombra.robin.png',
       corPrincipal: '#5D0000',
       corSecundaria: '#420000',
-      width: 600,
-      top: -5,
-      right: 100,
+      width: 640,
+      top: -8,
+      right: 60,
     },
     //MUTANO
     {
@@ -87,7 +85,7 @@ export class Initial {
     // Troca IMEDIATO
     this.personagemAtivo = this.personagens[index];
 
-    // Flash por cima
+    // Flash por cima é ativado ao trocarPersonagem
     flash.classList.remove('active');
     requestAnimationFrame(() => {
       flash.classList.add('active');
