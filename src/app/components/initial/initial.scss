@@ -13,9 +13,7 @@
   align-items: center;
   overflow: hidden;
   transition: background 0.4s ease;
-  box-shadow:
-    inset 0 -120px 120px rgba(0, 0, 0, 0.8),
-    inset 0 80px 80px rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 -120px 120px rgba(0, 0, 0, 0.8);
 
   .flash {
     position: absolute;
@@ -26,7 +24,7 @@
     z-index: 10;
 
     &.active {
-      animation: flashAnim 0.7s ease forwards;
+      animation: flashAnim 1s ease forwards;
     }
   }
   .hero-visual {
@@ -39,18 +37,21 @@
     justify-content: center;
     align-items: flex-end;
     pointer-events: none;
+    z-index: 2;
   }
 
   .personagem {
     position: absolute;
-    z-index: 2;
-    margin-right: 4%;
+    z-index: 1;
+    margin-right: 4.5%;
+    transition: all 0.7s ease;
   }
 
   .sombra {
     position: absolute;
     width: clamp(350px, 40vw, 600px);
     opacity: 0.4;
+    transition: all 0.8s ease;
     z-index: 1;
   }
   .hero-text {
@@ -67,9 +68,10 @@
     color: rgba(255, 255, 255, 0.693);
 
     .title {
-      font-size: 30vh;
+      font-size: 22vh;
     }
     .ph {
+      opacity: 0.8;
       margin-top: -10%;
       font-size: 18px;
       font-weight: 300;
@@ -81,12 +83,12 @@
 
   .hero-section {
     align-items: center; // centraliza o texto embaixo do botão
-    z-index: 11;
+    z-index: 13;
     display: flex;
-    gap: 40px;
+    gap: 35px;
     flex-wrap: wrap;
     margin-top: auto;
-    margin-bottom: 90px;
+    margin-bottom: 60px;
     background-color: black;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Deslocamento y, difusão, cor preta com 50% de opacidade */
     border-radius: 12px; // Combine com o raio dos botões para harmonia
@@ -101,10 +103,18 @@
       flex-direction: column;
       align-items: center; // centraliza o texto embaixo do botão
       .names {
+        margin-top: 10px;
         color: rgba(255, 255, 255, 0.693);
         transition: 0.2s;
       }
     }
+    .hero-btn.ativo {
+      transform: scale(1.15);
+
+      outline: 3px solid white;
+      box-shadow: 0 0 10px white;
+    }
+
     .hero-btn {
       border-radius: 15px;
       cursor: pointer;
@@ -135,6 +145,14 @@
         background-color: #1359a9;
       }
     }
+  }
+
+  .shadow-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 12;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, transparent 80%);
   }
   .hero-btn:hover {
     transform: scale(1.3);

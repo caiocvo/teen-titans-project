@@ -17,7 +17,7 @@ export class Initial {
       imgSombra: 'backgrounds/shadows/sombra.estelar.png',
       corPrincipal: '#D84800',
       corSecundaria: '#6E1F00',
-      width: 500,
+      width: 60,
       top: 8,
       right: 40,
     },
@@ -29,7 +29,7 @@ export class Initial {
       imgSombra: '/backgrounds/shadows/sombra.ravena.png',
       corPrincipal: '#210776',
       corSecundaria: '#0f044a',
-      width: 520,
+      width: 65,
       top: 8,
       right: 30,
     },
@@ -41,8 +41,8 @@ export class Initial {
       imgSombra: '/backgrounds/shadows/sombra.robin.png',
       corPrincipal: '#5D0000',
       corSecundaria: '#420000',
-      width: 640,
-      top: -8,
+      width: 75,
+      top: -10,
       right: 60,
     },
     //MUTANO
@@ -53,7 +53,7 @@ export class Initial {
       imgSombra: '/backgrounds/shadows/sombra.mutano.png',
       corPrincipal: '#0B4400',
       corSecundaria: '#051C00',
-      width: 520,
+      width: 60,
       top: 8,
       right: 80,
     },
@@ -65,12 +65,14 @@ export class Initial {
       imgSombra: '/backgrounds/shadows/sombra.cyborg.png',
       corPrincipal: '#004798',
       corSecundaria: '#003A7C',
-      width: 520,
+      width: 60,
       top: 8,
       right: 90,
     },
   ];
-  personagemAtivo = this.personagens[2]; //Robin default
+  personagemHero = this.personagens[2]; //Robin default
+  personagemAtivo = this.personagens[2];
+  trocaOut = 2;
 
   @ViewChild('flashRef') flashRef!: ElementRef;
   @ViewChild('heroRef') heroRef!: ElementRef;
@@ -78,17 +80,21 @@ export class Initial {
   private flashTimeout: any;
 
   trocarPersonagem(index: number) {
-    if (this.personagens[index] === this.personagemAtivo) return;
+    if (this.personagens[index] === this.personagemHero) return;
 
     const flash = this.flashRef.nativeElement;
 
-    // Troca IMEDIATO
-    this.personagemAtivo = this.personagens[index];
+    this.personagemHero = this.personagens[index];
 
     // Flash por cima é ativado ao trocarPersonagem
     flash.classList.remove('active');
     requestAnimationFrame(() => {
       flash.classList.add('active');
     });
+  }
+
+  personagemSelecionado(index: number) {
+    this.personagemAtivo = this.personagens[index];
+    this.trocaOut = index;
   }
 }
