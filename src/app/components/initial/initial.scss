@@ -1,3 +1,7 @@
+* {
+  font-family: 'Anton', sans-serif;
+}
+
 .hero {
   animation: bgMove 17s ease-in-out infinite alternate;
   min-height: 100vh;
@@ -68,7 +72,7 @@
     color: rgba(255, 255, 255, 0.693);
 
     .title {
-      font-size: 22vh;
+      font-size: 25vh;
     }
     .ph {
       opacity: 0.8;
