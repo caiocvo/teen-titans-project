@@ -15,9 +15,9 @@
       class="sombra"
       [src]="personagemHero.imgSombra"
       [ngStyle]="{
-        width: personagemHero.width + '%',
-        top: personagemHero.top + '%',
-        right: personagemHero.right + 'px',
+        width: (isMobile ? personagemHero.widthMobile : personagemHero.width) + '%',
+        top: (isMobile ? personagemHero.topMobile : personagemHero.top) + '%',
+        right: (isMobile ? personagemHero.rightMobile - 30 : personagemHero.right) + 'px',
       }"
     />
 
@@ -25,9 +25,9 @@
       class="personagem"
       [src]="personagemHero.img"
       [ngStyle]="{
-        width: personagemHero.width + '%',
-        top: personagemHero.top + '%',
-        right: personagemHero.right + 'px',
+        width: (isMobile ? personagemHero.widthMobile : personagemHero.width) + '%',
+        top: (isMobile ? personagemHero.topMobile : personagemHero.top) + '%',
+        right: (isMobile ? personagemHero.rightMobile : personagemHero.right) + 'px',
       }"
     />
   </div>

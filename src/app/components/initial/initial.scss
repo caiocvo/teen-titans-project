@@ -53,7 +53,6 @@
 
   .sombra {
     position: absolute;
-    width: clamp(350px, 40vw, 600px);
     opacity: 0.4;
     transition: all 0.8s ease;
     z-index: 1;
@@ -198,5 +197,90 @@
   }
   100% {
     opacity: 0;
+  }
+}
+
+@media (max-width: 990px) {
+  .hero {
+    .personagem,
+    .sombra {
+      margin-top: 20px;
+      padding-left: 30px;
+    }
+    .hero-text {
+      .ph {
+        font-size: 18px;
+      }
+      .title {
+        font-size: 20vh;
+      }
+    }
+    .hero-section {
+      padding: 10px 10px 0px 10px;
+
+      .hero-btn.ativo {
+        transform: scale(1.15);
+
+        outline: 3px solid white;
+        box-shadow: 0 0 7px white;
+      }
+
+      .hero-btn {
+        transition: all 0.12s ease;
+        padding: 50px;
+        background-size: cover;
+        background-position: center 1%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    .hero-visual {
+      width: 100%;
+      left: 0;
+      right: 0;
+      justify-content: center;
+    }
+    .hero-text {
+      margin-top: 0;
+      padding: 10px;
+      width: auto;
+      left: 50%;
+      transform: translateX(-53%);
+      text-align: center;
+      .ph {
+        display: none;
+      }
+      .title {
+        font-size: 13vh;
+      }
+    }
+    .personagem {
+      right: auto;
+      margin-right: 0;
+    }
+    .sombra {
+      margin-left: 3%;
+    }
+    .hero-section {
+      padding: 7px 7px 0px 7px;
+      gap: 10px;
+
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center; // centraliza o texto embaixo do botão
+        .names {
+          margin-top: 10px;
+          color: rgba(255, 255, 255, 0.693);
+          transition: 0.2s;
+        }
+      }
+      .hero-btn {
+        padding: 32px;
+      }
+    }
   }
 }

@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, ViewChild, ElementRef, NgZone } from '@angular/core';
-
+import { HostListener } from '@angular/core';
 @Component({
   selector: 'app-initial',
   imports: [CommonModule],
@@ -20,6 +20,10 @@ export class Initial {
       width: 60,
       top: 8,
       right: 40,
+      //mobile
+      widthMobile: 70,
+      topMobile: 17,
+      rightMobile: 95,
     },
     //RAVENA
     {
@@ -32,6 +36,10 @@ export class Initial {
       width: 65,
       top: 8,
       right: 30,
+      //mobile
+      widthMobile: 90,
+      topMobile: 17,
+      rightMobile: 50,
     },
     {
       //ROBIN
@@ -44,6 +52,10 @@ export class Initial {
       width: 75,
       top: -10,
       right: 60,
+      //mobile
+      widthMobile: 90,
+      topMobile: 7,
+      rightMobile: 50,
     },
     //MUTANO
     {
@@ -56,6 +68,10 @@ export class Initial {
       width: 60,
       top: 8,
       right: 80,
+      //mobile
+      widthMobile: 90,
+      topMobile: 17,
+      rightMobile: 0,
     },
     //CYBORG
     {
@@ -68,8 +84,13 @@ export class Initial {
       width: 60,
       top: 8,
       right: 90,
+      //mobile
+      widthMobile: 90,
+      topMobile: 20,
+      rightMobile: 50,
     },
   ];
+
   personagemHero = this.personagens[2]; //Robin default
   personagemAtivo = this.personagens[2];
   trocaOut = 2;
@@ -96,5 +117,10 @@ export class Initial {
   personagemSelecionado(index: number) {
     this.personagemAtivo = this.personagens[index];
     this.trocaOut = index;
+  }
+  isMobile = window.innerWidth <= 740;
+  @HostListener('window:resize')
+  onResize() {
+    this.isMobile = window.innerWidth <= 740;
   }
 }
