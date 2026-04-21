@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, ViewChild, ElementRef, NgZone } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 import { HostListener } from '@angular/core';
 @Component({
   selector: 'app-initial',
@@ -19,11 +19,11 @@ export class Initial {
       corSecundaria: '#6E1F00',
       width: 60,
       top: 8,
-      right: 40,
+      right: 4,
       //mobile
       widthMobile: 70,
       topMobile: 17,
-      rightMobile: 95,
+      rightMobile: 20,
     },
     //RAVENA
     {
@@ -35,11 +35,11 @@ export class Initial {
       corSecundaria: '#0f044a',
       width: 65,
       top: 8,
-      right: 30,
+      right: 4,
       //mobile
       widthMobile: 90,
       topMobile: 17,
-      rightMobile: 50,
+      rightMobile: 10,
     },
     {
       //ROBIN
@@ -50,12 +50,12 @@ export class Initial {
       corPrincipal: '#5D0000',
       corSecundaria: '#420000',
       width: 75,
-      top: -10,
-      right: 60,
+      top: -9,
+      right: 6,
       //mobile
       widthMobile: 90,
       topMobile: 7,
-      rightMobile: 50,
+      rightMobile: 5,
     },
     //MUTANO
     {
@@ -67,11 +67,11 @@ export class Initial {
       corSecundaria: '#051C00',
       width: 60,
       top: 8,
-      right: 80,
+      right: 4,
       //mobile
-      widthMobile: 90,
+      widthMobile: 60,
       topMobile: 17,
-      rightMobile: 0,
+      rightMobile: 15,
     },
     //CYBORG
     {
@@ -83,11 +83,11 @@ export class Initial {
       corSecundaria: '#003A7C',
       width: 60,
       top: 8,
-      right: 90,
+      right: 4,
       //mobile
-      widthMobile: 90,
-      topMobile: 20,
-      rightMobile: 50,
+      widthMobile: 80,
+      topMobile: 17,
+      rightMobile: 13,
     },
   ];
 
@@ -118,9 +118,10 @@ export class Initial {
     this.personagemAtivo = this.personagens[index];
     this.trocaOut = index;
   }
-  isMobile = window.innerWidth <= 740;
+
+  isMobile = window.innerWidth <= 690;
   @HostListener('window:resize')
   onResize() {
-    this.isMobile = window.innerWidth <= 740;
+    this.isMobile = window.innerWidth <= 690;
   }
 }
