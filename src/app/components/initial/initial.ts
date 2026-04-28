@@ -54,7 +54,7 @@ export class Initial {
       right: 6,
       //mobile
       widthMobile: 90,
-      topMobile: 7,
+      topMobile: 3,
       rightMobile: 5,
     },
     //MUTANO
