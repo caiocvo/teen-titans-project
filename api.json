@@ -3,37 +3,37 @@
     {
       "id": 0,
       "name": "Estelar",
-      "about": "Uma alienigena incrível",
-      "come": "voando",
-      "personality": "engraçada"
+      "about": "Koriand'r é uma princesa alienígena do planeta Tamaran, um mundo onde as emoções são literalmente a fonte de poder de seus habitantes. Após ser capturada e submetida a experimentos pelos Gordanianos, ganhou a capacidade de absorver e disparar raios de energia solar pelos olhos e mãos. Fugiu de seus captores e encontrou refúgio na Terra, onde se tornou um dos membros mais poderosos dos Jovens Titãs. Apesar de sua força imensurável, é conhecida por sua natureza gentil, curiosa e profundamente otimista diante de qualquer adversidade.",
+      "come": "Estelar chegou à Terra após escapar de uma nave espacial Gordaniana que a mantinha prisioneira. Sua chegada foi completamente caótica — ela colidiu com diversas construções em Jump City e logo se viu em meio a uma batalha intensa nas ruas da cidade. Foi esse confronto que chamou a atenção de Robin e desencadeou os eventos que reuniriam os futuros membros dos Jovens Titãs pela primeira vez, dando início a uma das maiores equipes de heróis jovens do universo DC.",
+      "personality": "Estelar é calorosa, sincera e extremamente empática com todos ao seu redor. Por ser de outro planeta, frequentemente interpreta as expressões e costumes humanos ao pé da letra, gerando situações genuinamente cômicas. Apesar dessa ingenuidade cultural aparente, demonstra uma sabedoria emocional profunda e uma lealdade absolutamente inabalável aos seus companheiros de equipe, sendo considerada o coração emocional dos Jovens Titãs."
     },
     {
       "id": 1,
       "name": "Ravena",
-      "about": "Uma telepata incrível",
-      "come": "voando alto",
-      "personality": "descreta"
+      "about": "Filha do temível demônio interdimensional Trigon com uma humana chamada Arella, Ravena nasceu em Azarath, uma dimensão de paz e espiritualidade intensa. Desde criança foi rigorosamente treinada para controlar suas emoções, pois seus poderosos dons de telecinese, teletransporte e manipulação de energia sombria são amplificados de forma perigosa por sentimentos intensos. Carrega o peso de uma antiga profecia que a coloca como o portal destinado à chegada catastrófica de seu pai à Terra.",
+      "come": "Ravena chegou aos Jovens Titãs buscando um propósito genuíno além do isolamento espiritual de Azarath. Sua natureza reservada e seus poderes de aparência sombria geravam desconfiança nos primeiros contatos com o grupo. No entanto, sua força interior inabalável, sua dedicação silenciosa ao time e sua disposição em sacrificar tudo pelos companheiros a tornaram rapidamente uma peça essencial e insubstituível dos Jovens Titãs.",
+      "personality": "Reservada, sarcástica e intelectualmente brilhante, Ravena prefere a companhia dos livros e do silêncio à agitação social do grupo. Raramente expressa seus sentimentos abertamente, mas demonstra um cuidado genuíno e profundo pelos companheiros quando realmente importa. Sua luta constante para manter o controle emocional e conter seu lado sombrio representa um dos arcos narrativos mais intensos e marcantes de toda a série animada."
     },
     {
       "id": 2,
       "name": "Robin",
-      "about": "Um lutador incrível",
-      "come": "pulando prédio",
-      "personality": "sério"
-    },
-    {
-      "id": 3,
-      "name": "Cyborg",
-      "about": "Um homem-robô incrível",
-      "come": "andando",
-      "personality": "ele é top"
+      "about": "Dick Grayson foi o primeiro Robin, parceiro fiel do Batman e ex-membro respeitado da Liga da Justiça. Após desentendimentos profundos com o Homem-Morcego, decidiu partir para construir sua própria identidade como herói independente. Sem nenhum poder sobre-humano, compensa com treinamento físico absolutamente excepcional, domínio avançado de diversas artes marciais, uso criativo de equipamentos tecnológicos sofisticados e uma inteligência estratégica raramente vista. É o fundador e líder incontestável dos Jovens Titãs.",
+      "come": "Robin chegou a Jump City completamente sozinho, carregando o peso de provar para si mesmo e para o mundo que era capaz de ser um herói independente do Batman. Ao enfrentar o misterioso e implacável vilão Slade pela primeira vez, rapidamente compreendeu que precisaria de aliados à altura do desafio. Foi então que reuniu Estelar, Ravena, Cyborg e Mutano, dando origem oficial aos Jovens Titãs e construindo a famosa Torre T às margens da baía.",
+      "personality": "Determinado, perfeccionista e extremamente focado em seus objetivos como líder e herói. Robin pode se tornar perigosamente rígido e obsessivo, especialmente quando o assunto envolve Slade e a proteção de seus companheiros. Sente o peso imenso da liderança de forma muito intensa e apresenta grande dificuldade em demonstrar vulnerabilidade ou pedir ajuda, mas sua dedicação absoluta ao time nunca é colocada em dúvida por ninguém."
     },
     {
       "id": 4,
+      "name": "Cyborg",
+      "about": "Victor Stone era um atleta extremamente promissor com um futuro brilhante pela frente até sofrer um acidente devastador que destruiu grande parte de seu corpo. Seu pai, um cientista dedicado, salvou sua vida substituindo os membros perdidos por sofisticados implantes cibernéticos de alta tecnologia. Inicialmente profundamente ressentido com sua nova condição híbrida, Victor encontrou nos Jovens Titãs um lugar onde poderia ser genuinamente aceito como é, sem julgamentos sobre sua aparência.",
+      "come": "Cyborg se juntou aos Jovens Titãs após cruzar inesperadamente o caminho de Robin em Jump City durante um confronto nas ruas da cidade. Sua vasta expertise tecnológica foi absolutamente fundamental não apenas para as batalhas do grupo, mas também para projetar e construir a icônica Torre dos Titãs, que se tornaria o lar e quartel-general da equipe. Sem ele, a infraestrutura do time simplesmente não existiria.",
+      "personality": "Extrovertido, bem-humorado e apaixonado por tecnologia e por comida em quantidades generosas. Cyborg é inegavelmente o coração descontraído e animado do grupo, sempre pronto para aliviar qualquer tensão com uma piada certeira ou um desafio de videogame. No entanto, carrega conflitos internos profundos sobre sua identidade — questionando constantemente o que significa ser simultaneamente parte humano e parte máquina."
+    },
+    {
+      "id": 3,
       "name": "Mutano",
-      "about": "Uma coisa incrível",
-      "come": "voando também",
-      "personality": "engraçado também"
+      "about": "Garfield Logan contraiu uma doença rara ainda na infância que só pôde ser curada através de uma arriscada experiência genética que lhe conferiu pele e cabelo verdes e a extraordinária capacidade de se transformar em qualquer animal já catalogado na Terra. Antes de se juntar aos Jovens Titãs, fez parte dos Doom Patrol, outra equipe de heróis. É o membro mais jovem do grupo atual e frequentemente subestimado, mas suas habilidades de metamorfose o tornam incrivelmente versátil em combate.",
+      "come": "Mutano se juntou aos Jovens Titãs após deixar os Doom Patrol em busca de um novo começo e de um lugar onde pudesse ser completamente ele mesmo sem restrições. Sua energia contagiante, seu humor constante e sua disposição para fazer amizades rapidamente o integraram ao grupo de forma natural, especialmente com Cyborg, com quem construiu uma amizade única e formou a dupla cômica mais inseparável e divertida de toda a equipe.",
+      "personality": "Brincalhão, otimista e assumidamente imaturo para sua idade, Mutano utiliza o humor como escudo protetor para inseguranças e medos mais profundos que raramente expõe. É vegetariano convicto por amor aos animais e faz questão de lembrar isso a absolutamente todos ao seu redor em todo momento possível. Apesar da leveza constante, demonstra momentos genuínos de maturidade surpreendente e coragem inabalável precisamente quando o grupo mais precisa."
     }
   ]
 }

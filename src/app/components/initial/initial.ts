@@ -1,15 +1,14 @@
-import { InformationService } from './../../services/information/information-service';
 import { CommonModule } from '@angular/common';
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { HostListener } from '@angular/core';
-import { Character } from '../../models/character';
+import { CharacterStateService } from '../../services/characterState/character-state-service';
 @Component({
   selector: 'app-initial',
   imports: [CommonModule],
   templateUrl: './initial.html',
   styleUrl: './initial.scss',
 })
-export class Initial implements OnInit {
+export class Initial {
   personagens = [
     //ESTELAR
     {
@@ -95,12 +94,15 @@ export class Initial implements OnInit {
 
   personagemHero = this.personagens[2]; //Robin default
   personagemAtivo = this.personagens[2];
-  trocaOut = 2;
 
   @ViewChild('flashRef') flashRef!: ElementRef;
   @ViewChild('heroRef') heroRef!: ElementRef;
 
   private flashTimeout: any;
+
+  trocaOut = 2;
+
+  constructor(private characterStateService: CharacterStateService) {}
 
   trocarPersonagem(index: number) {
     if (this.personagens[index] === this.personagemHero) return;
@@ -118,6 +120,7 @@ export class Initial implements OnInit {
 
   personagemSelecionado(index: number) {
     this.personagemAtivo = this.personagens[index];
+    this.characterStateService.setPersonagem(index);
     this.trocaOut = index;
   }
 
@@ -125,17 +128,5 @@ export class Initial implements OnInit {
   @HostListener('window:resize')
   onResize() {
     this.isMobile = window.innerWidth <= 690;
-  }
-
-  constructor(private informationService: InformationService) {}
-
-  chars: Character[] = [];
-  char!: Character;
-
-  ngOnInit() {
-    this.informationService.getCharById(this.trocaOut).subscribe((data) => {
-      this.char = data;
-      console.log(this.char);
-    });
   }
 }
