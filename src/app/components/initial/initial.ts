@@ -1,13 +1,15 @@
+import { InformationService } from './../../services/information/information-service';
 import { CommonModule } from '@angular/common';
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { HostListener } from '@angular/core';
+import { Character } from '../../models/character';
 @Component({
   selector: 'app-initial',
   imports: [CommonModule],
   templateUrl: './initial.html',
   styleUrl: './initial.scss',
 })
-export class Initial {
+export class Initial implements OnInit {
   personagens = [
     //ESTELAR
     {
@@ -123,5 +125,17 @@ export class Initial {
   @HostListener('window:resize')
   onResize() {
     this.isMobile = window.innerWidth <= 690;
+  }
+
+  constructor(private informationService: InformationService) {}
+
+  chars: Character[] = [];
+  char!: Character;
+
+  ngOnInit() {
+    this.informationService.getCharById(this.trocaOut).subscribe((data) => {
+      this.char = data;
+      console.log(this.char);
+    });
   }
 }

@@ -1,0 +1,39 @@
+{
+  "char": [
+    {
+      "id": 0,
+      "name": "Estelar",
+      "about": "Uma alienigena incrível",
+      "come": "voando",
+      "personality": "engraçada"
+    },
+    {
+      "id": 1,
+      "name": "Ravena",
+      "about": "Uma telepata incrível",
+      "come": "voando alto",
+      "personality": "descreta"
+    },
+    {
+      "id": 2,
+      "name": "Robin",
+      "about": "Um lutador incrível",
+      "come": "pulando prédio",
+      "personality": "sério"
+    },
+    {
+      "id": 3,
+      "name": "Cyborg",
+      "about": "Um homem-robô incrível",
+      "come": "andando",
+      "personality": "ele é top"
+    },
+    {
+      "id": 4,
+      "name": "Mutano",
+      "about": "Uma coisa incrível",
+      "come": "voando também",
+      "personality": "engraçado também"
+    }
+  ]
+}
