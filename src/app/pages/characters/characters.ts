@@ -6,9 +6,10 @@ import { InformationService } from './../../services/information/information-ser
 import { Character } from '../../models/character';
 import { CharacterStateService } from '../../services/characterState/character-state-service';
 import { Description } from '../../components/description/description';
+import { Nickname } from '../../components/nickname/nickname';
 @Component({
   selector: 'app-characters',
-  imports: [Navbar, Initial, Footer, Description],
+  imports: [Navbar, Initial, Footer, Description, Nickname],
   templateUrl: './characters.html',
   styleUrl: './characters.scss',
 })
