@@ -120,7 +120,7 @@ export class Initial {
 
   personagemSelecionado(index: number) {
     this.personagemAtivo = this.personagens[index];
-    this.characterStateService.setPersonagem(index);
+    this.characterStateService.setPersonagem(index, this.personagens[index].corPrincipal);
     this.trocaOut = index;
   }
 

@@ -2,24 +2,27 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgb(0, 0, 0);
-  height: 620px;
-  width: 320px;
+  background-color: rgb(7, 7, 7);
+  height: 540px;
+  width: 370px;
   padding: 20px;
   border-radius: 20px;
-  border: 3px solid rgb(255, 28, 28);
+  border: 5px solid var(--border-color);
+  transition: border-color 0.4s ease;
   margin-top: 40px;
   line-height: 1.5;
 
   &__icon {
-    width: 90px;
+    width: 60px;
     margin-bottom: 20px;
+    margin-top: 20px;
   }
 
   hr {
-    width: 100%;
-    border: 1px solid rgb(255, 28, 28);
+    width: 90%;
+    border: 0.5px solid rgb(255, 255, 255);
     margin-bottom: 10px;
+    opacity: 80;
   }
 
   &__title {

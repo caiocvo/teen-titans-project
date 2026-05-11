@@ -6,9 +6,13 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class CharacterStateService {
   private idActual = new BehaviorSubject<number>(2);
-  idActual$ = this.idActual.asObservable();
+  private colorActual = new BehaviorSubject<string>('#5D0000');
 
-  setPersonagem(index: number) {
+  idActual$ = this.idActual.asObservable();
+  colorActual$ = this.colorActual.asObservable();
+
+  setPersonagem(index: number, color: string) {
     this.idActual.next(index);
+    this.colorActual.next(color);
   }
 }

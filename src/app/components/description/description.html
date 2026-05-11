@@ -1,5 +1,5 @@
-<div class="card">
-  <img class="card__icon" src="/backgrounds/icons/robin-icon.png" />
+<div class="card" [style.--border-color]="borderColor">
+  <img class="card__icon" src="{{ imageUrl }}" />
   <hr />
   <h2 class="card__title">{{ title }}</h2>
   <p class="card__text">{{ text }}</p>

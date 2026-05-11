@@ -1,8 +1,15 @@
 <app-navbar></app-navbar>
 <app-initial></app-initial>
 <div class="align">
-  <app-description title="Sobre" text="{{ char?.about }}"> </app-description>
-  <app-description title="Personalidade" text="{{ char?.personality }}"> </app-description>
-  <app-description title="Como entrou" text="{{ char?.come }}"> </app-description>
+  <app-description title="Sobre" text="{{ char?.about }}" imageUrl="/icons/ponto.png">
+  </app-description>
+  <app-description
+    title="Personalidade"
+    text="{{ char?.personality }}"
+    imageUrl="/icons/gostar.png"
+  >
+  </app-description>
+  <app-description title="Entrada" text="{{ char?.come }}" imageUrl="/icons/porta.png">
+  </app-description>
 </div>
 <app-footer></app-footer>
