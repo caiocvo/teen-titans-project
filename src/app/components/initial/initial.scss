@@ -106,7 +106,9 @@
       flex-direction: column;
       align-items: center; // centraliza o texto embaixo do botão
       .names {
-        margin-top: 10px;
+        font-family: 'Barlow Semi Condensed', sans-serif;
+        font-weight: bold;
+        margin-top: 12px;
         color: rgba(255, 255, 255, 0.693);
         transition: 0.2s;
       }

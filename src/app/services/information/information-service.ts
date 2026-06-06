@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class InformationService {
-  private api = 'https://teen-titans-project.onrender.com/char';
+  private api = 'http://localhost:3000/char';
 
   constructor(private http: HttpClient) {}
 
