@@ -1,6 +1,8 @@
 <div class="power">
   <div class="power-area">
-    <img src="{{ ability?.[0]?.image }}" class="power-area__image" />
+    <!--Permitir que a imagem apareça. Esse teste garante com que mostre a
+    imagem do personagem ativo, porém a imagem do INDEX do array de do personagem ativo-->
+    <img [src]="ability![3].image" />
     <p class="power-area__text"></p>
   </div>
   <div class="power-section">

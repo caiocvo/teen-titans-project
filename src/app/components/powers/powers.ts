@@ -17,6 +17,7 @@ export class Powers {
   constructor(
     private characterStateService: CharacterStateService,
     private abilitiesService: AbilitiesService,
+    private cdr: ChangeDetectorRef,
   ) {}
 
   ngOnInit() {
@@ -30,6 +31,7 @@ export class Powers {
       .subscribe((ad) => {
         this.ability = ad;
         console.log(ad);
+        this.cdr.detectChanges(); // Obriga a aparecer a imagem
       });
   }
 }
