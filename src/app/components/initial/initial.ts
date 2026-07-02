@@ -13,7 +13,8 @@ export class Initial {
     //ESTELAR
     {
       nome: 'Estelar',
-      descricao: 'Uma princesa alienígena com poderes incríveis.',
+      descricao:
+        'Uma princesa do planeta Tamaran, dona de força extraordinária, habilidades de voo e rajadas de energia. Sua bondade, coragem e otimismo fazem dela uma das heroínas mais poderosas dos Titãs.',
       img: '/backgrounds/characters/starfire.png',
       imgSombra: 'backgrounds/shadows/sombra.estelar.png',
       corPrincipal: '#D84800',
@@ -29,7 +30,8 @@ export class Initial {
     //RAVENA
     {
       nome: 'Ravena',
-      descricao: 'Uma poderosa empata com habilidades místicas.',
+      descricao:
+        'Filha da humana Arella e do demônio Trigon, Ravena nasceu em Azarath e domina poderes místicos ligados às emoções. Sua sabedoria e autocontrole são essenciais para a equipe.',
       img: '/backgrounds/characters/raven.webp',
       imgSombra: '/backgrounds/shadows/sombra.ravena.png',
       corPrincipal: '#210776',
@@ -45,13 +47,14 @@ export class Initial {
     {
       //ROBIN
       nome: 'Robin',
-      descricao: 'O líder estratégico dos Titãs e mestre em combate.',
+      descricao:
+        'Líder estratégico dos Jovens Titãs, Robin compensa a ausência de superpoderes com inteligência, disciplina e domínio das artes marciais, inspirando sua equipe em cada missão.',
       img: '/backgrounds/characters/robin.webp',
       imgSombra: '/backgrounds/shadows/sombra.robin.png',
       corPrincipal: '#5D0000',
       corSecundaria: '#420000',
       width: 75,
-      top: -9,
+      top: -10,
       right: 6,
       //mobile
       widthMobile: 90,
@@ -61,7 +64,8 @@ export class Initial {
     //MUTANO
     {
       nome: 'Mutano',
-      descricao: 'Um metamorfo habilidoso que se transforma em animais.',
+      descricao:
+        'Após adquirir a habilidade de se transformar em qualquer animal, Mutano tornou-se o integrante mais irreverente dos Titãs. Seu bom humor esconde uma coragem admirável.',
       img: '/backgrounds/characters/beastboy.webp',
       imgSombra: '/backgrounds/shadows/sombra.mutano.png',
       corPrincipal: '#0B4400',
@@ -77,7 +81,8 @@ export class Initial {
     //CYBORG
     {
       nome: 'Cyborg',
-      descricao: 'Um homem meio máquina meio humano com um grande coração.',
+      descricao:
+        'Metade humano e metade máquina, Cyborg combina tecnologia avançada, força sobre-humana e um grande espírito de equipe. Sua genialidade faz dele o inventor do grupo.',
       img: '/backgrounds/characters/cyborg.webp',
       imgSombra: '/backgrounds/shadows/sombra.cyborg.png',
       corPrincipal: '#004798',
@@ -109,10 +114,11 @@ export class Initial {
 
     this.personagemHero = this.personagens[index];
 
-    // Flash por cima é ativado ao trocarPersonagem
     flash.classList.remove('active');
     requestAnimationFrame(() => {
-      flash.classList.add('active');
+      requestAnimationFrame(() => {
+        flash.classList.add('active');
+      });
     });
   }
 
