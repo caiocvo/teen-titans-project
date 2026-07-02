@@ -5,35 +5,165 @@
       "name": "Estelar",
       "about": "Koriand'r é uma princesa alienígena do planeta Tamaran, onde as emoções são fonte de poder. Após ser capturada pelos Gordanianos, ganhou a capacidade de disparar raios de energia solar. Encontrou refúgio na Terra e se tornou um dos membros mais poderosos dos Jovens Titãs.",
       "come": "Estelar chegou à Terra após escapar de uma nave Gordaniana que a mantinha prisioneira. Sua chegada caótica em Jump City chamou a atenção de Robin e desencadeou os eventos que reuniriam os futuros Jovens Titãs pela primeira vez.",
-      "personality": "Calorosa, sincera e extremamente empática. Por ser de outro planeta, interpreta expressões humanas ao pé da letra, gerando situações cômicas. Demonstra sabedoria emocional profunda e lealdade inabalável aos companheiros."
+      "personality": "Calorosa, sincera e extremamente empática. Por ser de outro planeta, interpreta expressões humanas ao pé da letra, gerando situações cômicas. Demonstra sabedoria emocional profunda e lealdade inabalável aos companheiros.",
+      "abilities": [
+        {
+          "id": 1,
+          "name": "Voar",
+          "text": "A capacidade de voo é uma das habilidades biológicas nativas de Estelar, herdada pelos tamaraneanos.",
+          "image": "/powers/starfire/starfire1.png"
+        },
+        {
+          "id": 2,
+          "name": "Starbolts",
+          "text": "Dispara projéteis de energia verde altamente destrutivos, capazes de causar grandes danos aos inimigos.",
+          "image": "/powers/starfire/starfire2.png"
+        },
+        {
+          "id": 3,
+          "name": "Força",
+          "text": "Seus músculos tamaraneanos suportam cargas muito acima do limite humano, permitindo erguer veículos e até destruir paredes de concreto com um único golpe.",
+          "image": "/powers/starfire/starfire3.png"
+        },
+        {
+          "id": 4,
+          "name": "Idiomas",
+          "text": "Um beijo é o método tamaraneano de transferência de conhecimento, permitindo que Estelar absorva e domine instantaneamente qualquer idioma de quem ela beija.",
+          "image": "/powers/starfire/starfire4.png"
+        }
+      ]
     },
     {
       "id": 1,
       "name": "Ravena",
       "about": "Filha do demônio Trigon com uma humana, Ravena nasceu em Azarath, dimensão de paz e espiritualidade. Treinada para controlar emoções, possui telecinese, teletransporte e manipulação de energia sombria amplificada por sentimentos intensos.",
       "come": "Ravena chegou aos Titãs buscando propósito além do isolamento de Azarath. Sua natureza reservada gerava desconfiança inicial, mas sua força interior e dedicação silenciosa a tornaram peça essencial e insubstituível do grupo.",
-      "personality": "Reservada, sarcástica e intelectualmente brilhante. Prefere livros e silêncio à agitação social. Sua luta constante para controlar o lado sombrio é um dos arcos mais intensos e marcantes de toda a série animada."
+      "personality": "Reservada, sarcástica e intelectualmente brilhante. Prefere livros e silêncio à agitação social. Sua luta constante para controlar o lado sombrio é um dos arcos mais intensos e marcantes de toda a série animada.",
+      "abilities": [
+        {
+          "id": 1,
+          "name": "Voo",
+          "text": "Levitando através de sua energia sombria, Ravena se desloca pelo ar sem qualquer esforço físico.",
+          "image": "/powers/raven/raven1.png"
+        },
+        {
+          "id": 2,
+          "name": "Telecinese",
+          "text": "Com um simples gesto, move objetos e até inimigos à distância usando apenas o poder da mente.",
+          "image": "/powers/raven/raven3.png"
+        },
+        {
+          "id": 3,
+          "name": "Escudo",
+          "text": "Uma barreira de energia escura se forma ao seu redor, bloqueando ataques físicos e mágicos antes que a atinjam.",
+          "image": "/powers/raven/raven4.png"
+        },
+        {
+          "id": 4,
+          "name": "Ataque",
+          "text": "Concentrando sua magia nas mãos, dispara rajadas de energia sombria capazes de derrubar adversários à distância.",
+          "image": "/powers/raven/raven2.png"
+        }
+      ]
     },
     {
       "id": 2,
       "name": "Robin",
       "about": "Dick Grayson foi o primeiro Robin, parceiro fiel do Batman e ex-membro respeitado da Liga da Justiça. Após desentendimentos profundos com o Homem-Morcego, decidiu partir para construir sua própria identidade como herói independente.",
       "come": "Robin chegou a Jump City completamente sozinho, carregando o peso de provar para si mesmo e para o mundo que era capaz de ser um herói independente do Batman.",
-      "personality": "Determinado, perfeccionista e extremamente focado em seus objetivos como líder e herói. Robin pode se tornar perigosamente rígido e obsessivo, especialmente quando o assunto envolve Slade e a proteção de seus companheiros."
+      "personality": "Determinado, perfeccionista e extremamente focado em seus objetivos como líder e herói. Robin pode se tornar perigosamente rígido e obsessivo, especialmente quando o assunto envolve Slade e a proteção de seus companheiros.",
+      "abilities": [
+        {
+          "id": 1,
+          "name": "Cinto",
+          "text": "Seu cinto de utilidades carrega birdarangs, gás de fumaça e diversos outros gadgets prontos para qualquer situação de combate.",
+          "image": "/powers/robin/robin2.png"
+        },
+        {
+          "id": 2,
+          "name": "Bastão",
+          "text": "Retrátil e versátil, o bastão é sua principal arma corpo a corpo, usado tanto pra atacar quanto pra se deslocar em acrobacias.",
+          "image": "/powers/robin/robin3.png"
+        },
+        {
+          "id": 3,
+          "name": "Combate",
+          "text": "Anos de treinamento intenso ao lado de Batman o transformaram em um lutador de elite, dominando diversas artes marciais.",
+          "image": "/powers/robin/robin4.png"
+        },
+        {
+          "id": 4,
+          "name": "Liderança",
+          "text": "À frente da equipe, é ele quem traça as estratégias e mantém os Titãs unidos mesmo nos momentos mais críticos.",
+          "image": "/powers/robin/robin1.png"
+        }
+      ]
     },
     {
       "id": 4,
       "name": "Cyborg",
       "about": "Victor Stone era um atleta promissor até sofrer um acidente devastador que destruiu grande parte de seu corpo. Seu pai o salvou com implantes cibernéticos avançados. Encontrou nos Jovens Titãs um lugar onde poderia ser aceito como é.",
       "come": "Cyborg se juntou aos Titãs após cruzar o caminho de Robin em Jump City. Sua expertise tecnológica foi fundamental para construir a Torre dos Titãs, que se tornaria o lar e quartel-general permanente da equipe.",
-      "personality": "Extrovertido, bem-humorado e apaixonado por tecnologia e comida. É o coração descontraído do grupo. Carrega conflitos internos sobre sua identidade dividida entre o humano e a máquina."
+      "personality": "Extrovertido, bem-humorado e apaixonado por tecnologia e comida. É o coração descontraído do grupo. Carrega conflitos internos sobre sua identidade dividida entre o humano e a máquina.",
+      "abilities": [
+        {
+          "id": 1,
+          "name": "Canhão",
+          "text": "Seu braço se transforma em um canhão sônico capaz de disparar rajadas de energia concentrada contra os inimigos.",
+          "image": "/powers/cyborg/cyborg1.png"
+        },
+        {
+          "id": 2,
+          "name": "Força",
+          "text": "Sendo metade homem, metade robô, seu corpo cibernético suporta impactos e exerce uma força muito acima da capacidade humana.",
+          "image": "/powers/cyborg/cyborg2.png"
+        },
+        {
+          "id": 3,
+          "name": "Upgrade",
+          "text": "Peças de seu próprio corpo podem ser reconfiguradas ou aprimoradas, adaptando seu equipamento a cada nova ameaça.",
+          "image": "/powers/cyborg/cyborg3.png"
+        },
+        {
+          "id": 4,
+          "name": "Hacking",
+          "text": "Conectando-se diretamente a qualquer sistema, domina softwares e máquinas com uma facilidade que nenhum outro Titã possui.",
+          "image": "/powers/cyborg/cyborg4.png"
+        }
+      ]
     },
     {
       "id": 3,
       "name": "Mutano",
       "about": "Garfield Logan curou doença rara com experiência genética que lhe deu pele verde e a capacidade de se transformar em qualquer animal. Antes dos Titãs, integrou os Doom Patrol e é o membro mais jovem do grupo.",
       "come": "Mutano se juntou aos Titãs após deixar os Doom Patrol, buscando novo começo. Sua energia contagiante e bom humor o integraram ao grupo, especialmente com Cyborg, com quem forma dupla cômica inseparável.",
-      "personality": "Brincalhão, otimista e imaturo, usa o humor como escudo para inseguranças mais profundas. É vegetariano convicto e faz questão de lembrar a todos. Demonstra maturidade e coragem quando o grupo mais precisa."
+      "personality": "Brincalhão, otimista e imaturo, usa o humor como escudo para inseguranças mais profundas. É vegetariano convicto e faz questão de lembrar a todos. Demonstra maturidade e coragem quando o grupo mais precisa.",
+      "abilities": [
+        {
+          "id": 1,
+          "name": "Força",
+          "text": "Gorilas, ursos e outros animais robustos emprestam a Mutano uma força física muito superior à de um humano comum.",
+          "image": "/powers/beastboy/beastboy3.png"
+        },
+        {
+          "id": 2,
+          "name": "Voo",
+          "text": "Assumindo a forma de um pterodátilo, ele alça voo e ganha visão privilegiada do campo de batalha de cima.",
+          "image": "/powers/beastboy/beastboy4.png"
+        },
+        {
+          "id": 3,
+          "name": "Respiração",
+          "text": "Transformando-se em uma baleia, consegue respirar e se mover livremente embaixo d'água, algo impossível em sua forma humana.",
+          "image": "/powers/beastboy/beastboy1.png"
+        },
+        {
+          "id": 4,
+          "name": "Camuflagem",
+          "text": "Pequenos animais como ratos e insetos permitem que ele se infiltre em espaços apertados e passe despercebido pelos inimigos.",
+          "image": "/powers/beastboy/beastboy2.png"
+        }
+      ]
     }
   ]
 }

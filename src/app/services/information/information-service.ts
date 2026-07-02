@@ -12,6 +12,7 @@ export class InformationService {
   getCharById(id: number) {
     return this.http.get<Character>(`${this.api}/${id}`);
   }
+  //Don't need it
   getChars() {
     return this.http.get<Character[]>(`${this.api}`);
   }
