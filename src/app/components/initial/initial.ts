@@ -98,8 +98,6 @@ export class Initial {
   @ViewChild('flashRef') flashRef!: ElementRef;
   @ViewChild('heroRef') heroRef!: ElementRef;
 
-  private flashTimeout: any;
-
   trocaOut = 2;
 
   constructor(private characterStateService: CharacterStateService) {}

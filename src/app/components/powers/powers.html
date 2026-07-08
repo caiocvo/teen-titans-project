@@ -1,13 +1,30 @@
 <div class="power">
+  <h2 class="power-title">Super Poderes e Habilidades</h2>
+
   <div class="power-area">
-    <p class="power-area__text">
-      aaaaaaaaaaaaaaa
-    </p>
+    @if (activeAbility) {
+    <div class="power-area__media">
+      <img [src]="activeAbility.image" class="power-area__image" [alt]="activeAbility.name">
+    </div>
+
+    <div class="power-area__info">
+      <div class="power-area__index">
+        <span class="power-area__index-bar"></span>
+        {{ abilityActivate + 1 }}
+      </div>
+
+      <h3 class="power-area__name">{{ activeAbility.name }}</h3>
+      <p class="power-area__description">{{ activeAbility.text }}</p>
+    </div>
+    }
   </div>
+
   <div class="power-section">
-    <a [style.--bg-color]="colorsButton[idActual]">{{ ability![0].name }}</a>
-    <a [style.--bg-color]="colorsButton[idActual]">{{ ability![1].name }}</a>
-    <a [style.--bg-color]="colorsButton[idActual]">{{ ability![2].name }}</a>
-    <a [style.--bg-color]="colorsButton[idActual]">{{ ability![3].name }}</a>
+    @for (ab of ability; track ab.id; let i = $index) {
+    <a class="power" [class.active]="abilityActivate == i" [style.--bg-color]="colorsButton[idActual]"
+      (click)="selectAbility(i)">
+      {{ ab.name }}
+    </a>
+    }
   </div>
 </div>

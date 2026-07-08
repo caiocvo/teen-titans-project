@@ -13,9 +13,11 @@ import { switchMap } from 'rxjs';
 })
 export class Powers {
   char?: Character;
-  ability?: Ability[];
+  ability?: Ability[]; //Array de habilidades de todo o personagem
   idActual = 2;
   colorsButton = ['#ff2f00', '#24005b', '#e80000', '#1b9100', '#0059bf'];
+  abilityActivate = 1; //Index do array de habilidades
+
   constructor(
     private characterStateService: CharacterStateService,
     private abilitiesService: AbilitiesService,
@@ -23,10 +25,8 @@ export class Powers {
   ) {}
 
   ngOnInit() {
-    //Pego o id atual do personagem para fazer o retorno
-    //Após ter retornado o personagem, guardo as informações das habilidades
-    //switchMap serve para não alinhar vários subscribes um dentro do outro, algo recomendado
-    //subscribe "ativa" o observable de abilities, função do service
+    /*Apenas para mudar a cor dos botões, reutilizamos o id do personagem ativado no momento
+    como posição do vetor colorButton*/
 
     this.characterStateService.idActual$.subscribe((index) => {
       this.idActual = index;
@@ -35,8 +35,22 @@ export class Powers {
       .pipe(switchMap((index) => this.abilitiesService.getAbilities(index)))
       .subscribe((ad) => {
         this.ability = ad;
-        console.log(ad);
-        this.cdr.detectChanges(); // Obriga a aparecer a imagem
+        this.abilityActivate = 0; // reseta seleção ao trocar de personagem, partindo sempre da primeira habilidade
+        this.cdr.detectChanges();
       });
+  }
+
+  /*Isso é só uma função que recebe um número e guarda ele em abilityActivate. O clique no HTML vai
+  chamar essa função passando o índice do botão clicado. */
+  selectAbility(index: number) {
+    this.abilityActivate = index;
+  }
+
+  /*Um getter é tipo uma propriedade "calculada" — toda vez que você escreve activeAbility em algum lugar,
+  o Angular executa essa função e te devolve o resultado atualizado. Isso resolve o problema de inicializar uma variável
+  sem receber os dados da API e ser nulo*/
+
+  get activeAbility(): Ability | undefined {
+    return this.ability?.[this.abilityActivate];
   }
 }

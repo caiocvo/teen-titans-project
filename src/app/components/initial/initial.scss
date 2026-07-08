@@ -116,8 +116,8 @@
     .hero-btn.ativo {
       transform: scale(1.15);
 
-      outline: 3px solid white;
-      box-shadow: 0 0 10px white;
+      outline: 5px solid rgb(248, 255, 50);
+      box-shadow: 0 0 15px rgb(249, 255, 81);
     }
 
     .hero-btn {
@@ -277,6 +277,7 @@
         outline: 3px solid white;
         box-shadow: 0 0 8px white;
       }
+
       .item {
         display: flex;
         flex-direction: column;
