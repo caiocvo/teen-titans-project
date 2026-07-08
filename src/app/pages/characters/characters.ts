@@ -7,9 +7,10 @@ import { Character } from '../../models/character';
 import { CharacterStateService } from '../../services/characterState/character-state-service';
 import { Description } from '../../components/description/description';
 import { Nickname } from '../../components/nickname/nickname';
+import { Powers } from '../../components/powers/powers';
 @Component({
   selector: 'app-characters',
-  imports: [Navbar, Initial, Footer, Description, Nickname],
+  imports: [Navbar, Initial, Footer, Description, Nickname,Powers],
   templateUrl: './characters.html',
   styleUrl: './characters.scss',
 })

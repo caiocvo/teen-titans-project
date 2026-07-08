@@ -4,15 +4,20 @@
 
 <h2>SOBRE O PERSONAGEM</h2>
 <div class="align">
+  <!--Cartão sobre-->
   <app-description title="Sobre" text="{{ char?.about }}" imageUrl="/icons/ponto.png">
   </app-description>
-  <app-description
-    title="Personalidade"
-    text="{{ char?.personality }}"
-    imageUrl="/icons/gostar.png"
-  >
+
+  <!--Cartão Personalidade-->
+  <app-description title="Personalidade" text="{{ char?.personality }}" imageUrl="/icons/gostar.png">
   </app-description>
+
+  <!--Cartão Como entrou-->
   <app-description title="Entrada" text="{{ char?.come }}" imageUrl="/icons/porta.png">
   </app-description>
+
 </div>
+
+<app-powers></app-powers>
+
 <app-footer></app-footer>

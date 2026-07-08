@@ -1,14 +1,13 @@
 <div class="power">
   <div class="power-area">
-    <!--Permitir que a imagem apareça. Esse teste garante com que mostre a
-    imagem do personagem ativo, porém a imagem do INDEX do array de do personagem ativo-->
-    <img [src]="ability![3].image" />
-    <p class="power-area__text"></p>
+    <p class="power-area__text">
+      aaaaaaaaaaaaaaa
+    </p>
   </div>
   <div class="power-section">
-    <a></a>
-    <a></a>
-    <a></a>
-    <a></a>
+    <a [style.--bg-color]="colorsButton[idActual]">{{ ability![0].name }}</a>
+    <a [style.--bg-color]="colorsButton[idActual]">{{ ability![1].name }}</a>
+    <a [style.--bg-color]="colorsButton[idActual]">{{ ability![2].name }}</a>
+    <a [style.--bg-color]="colorsButton[idActual]">{{ ability![3].name }}</a>
   </div>
 </div>

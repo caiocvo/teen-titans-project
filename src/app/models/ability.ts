@@ -1,5 +1,5 @@
 export interface Ability {
-  idPower: number;
+  id: number;
   name: string;
   text: string;
   image: string;

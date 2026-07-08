@@ -5,3 +5,39 @@ p {
   font-size: 10px;
   color: white;
 }
+
+a {
+  color: white !important;
+  text-transform: uppercase;
+  text-align: center;
+  height: 60px;
+  width: 150px;
+  border-radius: 5px;
+  display: flex;
+  background-color: var(--bg-color);
+  align-items: center;
+  justify-content: center;
+  font-family: 'Anton', sans-serif;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.power {
+  display: flex;
+  flex-direction: column;
+  .power-area {
+    display: flex;
+    background-color: blue;
+    &__text {
+      color: greenyellow;
+    }
+  }
+  .power-section {
+    margin-top: -10px;
+    display: flex;
+    text-align: center; // centraliza o texto embaixo do botão
+    justify-content: center;
+    gap: 40px;
+    align-items: center;
+  }
+}
