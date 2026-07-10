@@ -1,7 +1,6 @@
 .power {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
   max-width: 900px;
   margin: 0 auto;
 
@@ -12,7 +11,7 @@
     font-size: 28px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    margin: 0;
+    margin-bottom: 3%;
   }
 
   .power-area {
@@ -20,13 +19,12 @@
     background-color: #1c1c1c;
     border-radius: 10px;
     overflow: hidden;
-    min-height: 320px;
+    min-height: 470px;
 
     &__media {
       position: relative;
-      flex: 0 0 55%;
+      flex: 0 0 60%;
       overflow: hidden;
-      clip-path: polygon(0 0, 78% 0, 55% 100%, 0 100%);
     }
 
     &__image {
@@ -42,11 +40,21 @@
       padding: 1.5rem 2rem;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      align-items: flex-end;
+      gap: 10px;
+
+      background-color: #1c1c1c;
+
+      clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+
+      margin-left: -80px;
+      padding-left: 4rem;
     }
 
     &__index {
-      position: absolute;
+      position: static;
+      align-self: flex-end;
+      margin-bottom: 25%;
       top: 1.5rem;
       right: 2rem;
       display: flex;
@@ -70,7 +78,7 @@
       text-transform: uppercase;
       text-decoration: underline;
       text-underline-offset: 4px;
-      margin: 0 0 0.75rem;
+      margin: 0 0 2rem 0; // ou 4px 0 0.75rem 0 se quiser um respiro mínimo
     }
 
     &__description {
@@ -79,14 +87,17 @@
       line-height: 1.6;
       max-width: 260px;
       margin: 0;
+      text-align: right;
     }
   }
 
   .power-section {
+    padding: 0px 7% 90px 7%;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
     flex-wrap: wrap;
+    margin-top: -10px;
   }
 }
 
@@ -94,27 +105,27 @@ a.power {
   color: white !important;
   text-transform: uppercase;
   text-align: center;
-  height: 55px;
-  width: 150px;
+  height: 60px;
+  width: 160px;
   border-radius: 5px;
   display: flex;
   background-color: var(--bg-color);
   align-items: center;
   justify-content: center;
   font-family: 'Anton', sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   cursor: pointer;
   text-decoration: none;
-  opacity: 0.45;
+  opacity: 0.6;
   transition: all 0.2s ease;
 
   &:hover {
     opacity: 0.75;
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
 
   &.active {
     opacity: 1;
-    transform: scale(1.05);
+    transform: scale(1.2);
   }
 }
