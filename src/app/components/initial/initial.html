@@ -1,35 +1,23 @@
-<div
-  #heroRef
-  class="hero"
-  [ngStyle]="{
+<div #heroRef class="hero" [ngStyle]="{
     background:
       'linear-gradient(135deg, #000 0%, #000 20%, transparent 52%),' +
       'linear-gradient(45deg, #000 0%, #000 20%, transparent 40%),' +
       personagemHero.corPrincipal,
-  }"
->
+  }">
   <div #flashRef class="flash"></div>
 
   <div class="hero-visual">
-    <img
-      class="sombra"
-      [src]="personagemHero.imgSombra"
-      [ngStyle]="{
+    <img class="sombra" [src]="personagemHero.imgSombra" [ngStyle]="{
         width: (isMobile ? personagemHero.widthMobile : personagemHero.width) + '%',
         top: (isMobile ? personagemHero.topMobile : personagemHero.top) + '%',
         right: (isMobile ? personagemHero.rightMobile - 4 : personagemHero.right) + '%',
-      }"
-    />
+      }" />
 
-    <img
-      class="personagem"
-      [src]="personagemHero.img"
-      [ngStyle]="{
+    <img class="personagem" [src]="personagemHero.img" [ngStyle]="{
         width: (isMobile ? personagemHero.widthMobile : personagemHero.width) + '%',
         top: (isMobile ? personagemHero.topMobile : personagemHero.top) + '%',
         right: (isMobile ? personagemHero.rightMobile : personagemHero.right) + '%',
-      }"
-    />
+      }" />
   </div>
 
   <div class="hero-text">
@@ -40,60 +28,31 @@
 
   <!--mouseenter-->
   <div class="hero-section">
+
     <div class="item">
-      <a
-        class="hero-btn starfire"
-        [class.ativo]="trocaOut === 0"
-        (mouseenter)="trocarPersonagem(0)"
-        (click)="personagemSelecionado(0)"
-        (mouseleave)="trocarPersonagem(trocaOut)"
-      ></a>
-      <p class="names">{{ personagens[0].nome }}</p>
+      <a class="hero-btn starfire" [class.ativo]="trocaOut === 0" (mouseenter)="trocarPersonagem(0)"
+        (click)="personagemSelecionado(0)" (mouseleave)="trocarPersonagem(trocaOut)"></a>
     </div>
 
     <div class="item">
-      <a
-        class="hero-btn raven"
-        [class.ativo]="trocaOut === 1"
-        (mouseenter)="trocarPersonagem(1)"
-        (click)="personagemSelecionado(1)"
-        (mouseleave)="trocarPersonagem(trocaOut)"
-      ></a>
-      <p class="names">{{ personagens[1].nome }}</p>
+      <a class="hero-btn raven" [class.ativo]="trocaOut === 1" (mouseenter)="trocarPersonagem(1)"
+        (click)="personagemSelecionado(1)" (mouseleave)="trocarPersonagem(trocaOut)"></a>
     </div>
 
     <div class="item">
-      <a
-        class="hero-btn robin"
-        [class.ativo]="trocaOut === 2"
-        (mouseenter)="trocarPersonagem(2)"
-        (click)="personagemSelecionado(2)"
-        (mouseleave)="trocarPersonagem(trocaOut)"
-      >
+      <a class="hero-btn robin" [class.ativo]="trocaOut === 2" (mouseenter)="trocarPersonagem(2)"
+        (click)="personagemSelecionado(2)" (mouseleave)="trocarPersonagem(trocaOut)">
       </a>
-      <p class="names">{{ personagens[2].nome }}</p>
     </div>
 
     <div class="item">
-      <a
-        class="hero-btn cyborg"
-        [class.ativo]="trocaOut === 4"
-        (mouseenter)="trocarPersonagem(4)"
-        (click)="personagemSelecionado(4)"
-        (mouseleave)="trocarPersonagem(trocaOut)"
-      ></a>
-      <p class="names">{{ personagens[4].nome }}</p>
+      <a class="hero-btn cyborg" [class.ativo]="trocaOut === 4" (mouseenter)="trocarPersonagem(4)"
+        (click)="personagemSelecionado(4)" (mouseleave)="trocarPersonagem(trocaOut)"></a>
     </div>
 
     <div class="item">
-      <a
-        class="hero-btn beastboy"
-        [class.ativo]="trocaOut === 3"
-        (mouseenter)="trocarPersonagem(3)"
-        (click)="personagemSelecionado(3)"
-        (mouseleave)="trocarPersonagem(trocaOut)"
-      ></a>
-      <p class="names">{{ personagens[3].nome }}</p>
+      <a class="hero-btn beastboy" [class.ativo]="trocaOut === 3" (mouseenter)="trocarPersonagem(3)"
+        (click)="personagemSelecionado(3)" (mouseleave)="trocarPersonagem(trocaOut)"></a>
     </div>
   </div>
 </div>
