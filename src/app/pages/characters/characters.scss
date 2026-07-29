@@ -1,14 +1,20 @@
 .align {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 50px;
+  gap: 10px;
   margin-bottom: 10%;
+  margin-left: 5.2%;
 }
 
-h2 {
-  color: rgb(232, 230, 230);
-  text-align: center;
-  font-family: 'Anton', sans-serif;
+.title {
+  align-items: flex-start;
+  margin-bottom: 50px;
+  margin-left: 5%;
+  display: inline-block;
+  border-bottom: solid var(--border-color) 7px;
+  h2 {
+    color: rgb(232, 230, 230);
+    font-family: 'Anton', sans-serif;
+  }
 }

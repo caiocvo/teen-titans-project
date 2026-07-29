@@ -2,19 +2,22 @@
 <app-initial></app-initial>
 <app-nickname></app-nickname>
 
-<h2>SOBRE O PERSONAGEM</h2>
+<div class="title" [style.--border-color]="colorBorder">
+  <h2>SOBRE O PERSONAGEM</h2>
+</div>
+
 
 <div class="align">
   <!--Cartão sobre-->
-  <app-description title="Sobre" text="{{ char?.about }}" imageUrl="/icons/ponto.png">
+  <app-description title="SOBRE" text="{{ char?.about }}">
   </app-description>
 
   <!--Cartão Personalidade-->
-  <app-description title="Personalidade" text="{{ char?.personality }}" imageUrl="/icons/gostar.png">
+  <app-description title="PERSONALIDADE" text="{{ char?.personality }}">
   </app-description>
 
   <!--Cartão Como entrou-->
-  <app-description title="Entrada" text="{{ char?.come }}" imageUrl="/icons/porta.png">
+  <app-description title="COMO ENTROU" text="{{ char?.come }}">
   </app-description>
 
 </div>

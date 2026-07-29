@@ -10,12 +10,14 @@ import { Nickname } from '../../components/nickname/nickname';
 import { Powers } from '../../components/powers/powers';
 @Component({
   selector: 'app-characters',
-  imports: [Navbar, Initial, Footer, Description, Nickname,Powers],
+  imports: [Navbar, Initial, Footer, Description, Nickname, Powers],
   templateUrl: './characters.html',
   styleUrl: './characters.scss',
 })
 export class Characters {
   char?: Character;
+  colorsButton = ['#fa5530', '#5926a5', '#d92727', '#44ad2d', '#3c7fcb'];
+  colorBorder: any;
 
   @Output('submit') onSubmit = new EventEmitter();
   @Output('navigate') onNavigate = new EventEmitter();
@@ -36,6 +38,7 @@ export class Characters {
     this.characterStateService.idActual$.subscribe((index) => {
       this.informationService.getCharById(index).subscribe((data) => {
         this.char = data;
+        this.colorBorder = this.colorsButton[index];
         this.cdr.detectChanges();
       });
     });

@@ -10,14 +10,4 @@ import { CharacterStateService } from '../../services/characterState/character-s
 export class Description {
   @Input() title: string = '';
   @Input() text: string = '';
-  @Input() imageUrl: string = '';
-  borderColor = '#5D0000';
-
-  constructor(private characterState: CharacterStateService) {}
-
-  ngOnInit() {
-    this.characterState.colorActual$.subscribe((color) => {
-      this.borderColor = color;
-    });
-  }
 }

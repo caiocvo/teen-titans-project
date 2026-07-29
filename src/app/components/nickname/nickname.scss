@@ -8,8 +8,8 @@
   gap: 23px;
   &__title {
     color: rgb(232, 230, 230);
-    font-size: 30px;
-    margin-top: 7px;
+    font-size: 28px;
+    margin-top: 10px;
   }
   &__icon {
     background-image: var(--bg-icon);
@@ -20,6 +20,6 @@
     border-radius: 30px;
     background-size: cover;
     background-position: center 1%;
-    margin-right: 10%;
+    margin-right: 5%;
   }
 }
