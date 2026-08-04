@@ -3,12 +3,12 @@ import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { HostListener } from '@angular/core';
 import { CharacterStateService } from '../../services/characterState/character-state-service';
 @Component({
-  selector: 'app-initial',
+  selector: 'app-hero-section',
   imports: [CommonModule],
-  templateUrl: './initial.html',
-  styleUrl: './initial.scss',
+  templateUrl: './hero-section.html',
+  styleUrl: './hero-section.scss',
 })
-export class Initial {
+export class HeroSection {
   personagens = [
     //ESTELAR
     {

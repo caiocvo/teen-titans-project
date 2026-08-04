@@ -1,6 +1,5 @@
 import { Component, Output, EventEmitter, ChangeDetectorRef } from '@angular/core';
 import { Navbar } from '../../components/navbar/navbar';
-import { Initial } from '../../components/initial/initial';
 import { Footer } from '../../components/footer/footer';
 import { InformationService } from './../../services/information/information-service';
 import { Character } from '../../models/character';
@@ -8,9 +7,10 @@ import { CharacterStateService } from '../../services/characterState/character-s
 import { Description } from '../../components/description/description';
 import { Nickname } from '../../components/nickname/nickname';
 import { Powers } from '../../components/powers/powers';
+import { HeroSection } from '../../components/hero-section/hero-section';
 @Component({
   selector: 'app-characters',
-  imports: [Navbar, Initial, Footer, Description, Nickname, Powers],
+  imports: [Navbar, HeroSection, Footer, Description, Nickname, Powers],
   templateUrl: './characters.html',
   styleUrl: './characters.scss',
 })
