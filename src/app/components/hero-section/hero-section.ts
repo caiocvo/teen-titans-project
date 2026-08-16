@@ -1,14 +1,21 @@
 import { CommonModule } from '@angular/common';
-import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-import { HostListener } from '@angular/core';
+import {
+  Component,
+  ViewChild,
+  ElementRef,
+  AfterViewInit,
+  OnDestroy,
+  HostListener,
+} from '@angular/core';
 import { CharacterStateService } from '../../services/characterState/character-state-service';
+
 @Component({
   selector: 'app-hero-section',
   imports: [CommonModule],
   templateUrl: './hero-section.html',
   styleUrl: './hero-section.scss',
 })
-export class HeroSection {
+export class HeroSection implements AfterViewInit, OnDestroy {
   personagens = [
     //ESTELAR
     {
@@ -22,10 +29,6 @@ export class HeroSection {
       width: 60,
       top: 8,
       right: 4,
-      //mobile
-      widthMobile: 70,
-      topMobile: 17,
-      rightMobile: 20,
     },
     //RAVENA
     {
@@ -36,13 +39,9 @@ export class HeroSection {
       imgSombra: '/backgrounds/shadows/sombra.ravena.png',
       corPrincipal: '#210776',
       corSecundaria: '#0f044a',
-      width: 65,
+      width: 75,
       top: 8,
       right: 4,
-      //mobile
-      widthMobile: 90,
-      topMobile: 17,
-      rightMobile: 10,
     },
     {
       //ROBIN
@@ -56,10 +55,6 @@ export class HeroSection {
       width: 75,
       top: -10,
       right: 6,
-      //mobile
-      widthMobile: 90,
-      topMobile: 3,
-      rightMobile: 5,
     },
     //MUTANO
     {
@@ -73,10 +68,6 @@ export class HeroSection {
       width: 60,
       top: 8,
       right: 4,
-      //mobile
-      widthMobile: 60,
-      topMobile: 17,
-      rightMobile: 15,
     },
     //CYBORG
     {
@@ -90,10 +81,6 @@ export class HeroSection {
       width: 60,
       top: 8,
       right: 4,
-      //mobile
-      widthMobile: 80,
-      topMobile: 17,
-      rightMobile: 13,
     },
   ];
 
@@ -105,7 +92,33 @@ export class HeroSection {
 
   trocaOut = 2;
 
+  // controla o modo de seleção mobile (grade vs. foco em 1 personagem)
+  mobileSelecionado = false;
+  private heroObserver?: IntersectionObserver;
+
+  // duração precisa bater com a transition definida no SCSS (.titan-grid.foco .titan-card)
+  private readonly DURACAO_TRANSICAO_MS = 550;
+
   constructor(private characterStateService: CharacterStateService) {}
+
+  ngAfterViewInit() {
+    if (!this.isMobile) return;
+
+    this.heroObserver = new IntersectionObserver(
+      ([entry]) => {
+        // se a hero voltou a aparecer na tela e estávamos no modo "focado", reseta pra grade
+        if (entry.isIntersecting && this.mobileSelecionado) {
+          this.resetarSelecaoMobile();
+        }
+      },
+      { threshold: 0.6 },
+    );
+    this.heroObserver.observe(this.heroRef.nativeElement);
+  }
+
+  ngOnDestroy() {
+    this.heroObserver?.disconnect();
+  }
 
   trocarPersonagem(index: number) {
     if (this.personagens[index] === this.personagemHero) return;
@@ -126,11 +139,29 @@ export class HeroSection {
     this.personagemAtivo = this.personagens[index];
     this.characterStateService.setPersonagem(index, this.personagens[index].corPrincipal);
     this.trocaOut = index;
+
+    if (this.isMobile) {
+      this.selecionarMobile(index);
+    }
   }
 
-  isMobile = window.innerWidth <= 690;
+  private selecionarMobile(index: number) {
+    this.trocarPersonagem(index);
+    this.mobileSelecionado = true;
+
+    setTimeout(() => {
+      const proximaSecao = this.heroRef.nativeElement.nextElementSibling as HTMLElement | null;
+      proximaSecao?.scrollIntoView({ behavior: 'smooth' });
+    }, this.DURACAO_TRANSICAO_MS);
+  }
+
+  private resetarSelecaoMobile() {
+    this.mobileSelecionado = false;
+  }
+
+  isMobile = window.innerWidth <= 1020;
   @HostListener('window:resize')
   onResize() {
-    this.isMobile = window.innerWidth <= 690;
+    this.isMobile = window.innerWidth <= 1020;
   }
 }

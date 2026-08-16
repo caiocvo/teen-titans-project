@@ -1,5 +1,4 @@
 import { Component, Output, EventEmitter, ChangeDetectorRef } from '@angular/core';
-import { Navbar } from '../../components/navbar/navbar';
 import { Footer } from '../../components/footer/footer';
 import { InformationService } from './../../services/information/information-service';
 import { Character } from '../../models/character';
@@ -10,7 +9,7 @@ import { Powers } from '../../components/powers/powers';
 import { HeroSection } from '../../components/hero-section/hero-section';
 @Component({
   selector: 'app-characters',
-  imports: [Navbar, HeroSection, Footer, Description, Nickname, Powers],
+  imports: [HeroSection, Footer, Description, Nickname, Powers],
   templateUrl: './characters.html',
   styleUrl: './characters.scss',
 })

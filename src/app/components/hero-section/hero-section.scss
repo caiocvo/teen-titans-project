@@ -32,6 +32,7 @@
     }
   }
   .hero-visual {
+    top: 25px;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -68,12 +69,13 @@
     border-radius: 12px;
     position: absolute;
     margin-bottom: auto;
-    width: 40rem;
+    width: 36rem;
     line-height: 1.5;
     padding: 20px;
     top: 0;
     left: 0;
     margin-left: 10px;
+    margin-top: 40px;
     color: #ffffff;
 
     .title {
@@ -99,11 +101,11 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: auto;
-    margin-bottom: 60px;
-    background-color: black;
+    margin-bottom: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Deslocamento y, difusão, cor preta com 50% de opacidade */
     border-radius: 10px; // Combine com o raio dos botões para harmonia
-    padding: 25px 25px 25px 25px;
+    padding: 22px 25px 22px 25px;
     box-shadow:
       0 20px 40px rgba(0, 0, 0, 0.6),
       0 10px 20px rgba(0, 0, 0, 0.4),
@@ -118,12 +120,12 @@
       transform: scale(1.15);
       outline: 2px solid red; /* Segunda linha externa */
       outline-offset: 5px;
-      opacity: 1;
+      opacity: 100%;
       outline: 3px solid rgb(248, 255, 50);
     }
 
     .hero-btn {
-      opacity: 0.6;
+      opacity: 50%;
       border-radius: 10px;
       cursor: pointer;
       transition: all 0.12s ease;
@@ -186,35 +188,30 @@
   }
 }
 
-@media (max-width: 990px) {
+@media (max-width: 1120px) {
   .hero {
     .hero-visual {
-      top: 8%;
+      width: 55%;
+      top: 10%;
     }
     .hero-text {
-      top: 4%;
+      top: 10%;
+      width: 23rem;
       .title {
-        font-size: 13vh;
+        font-size: 20vh;
       }
       .ph {
-        font-size: 12px;
+        font-size: 15px;
       }
     }
-    .hero-section {
-      padding: 10px 10px 0px 10px;
-      margin-bottom: 120px;
 
-      .hero-btn {
-        transition: all 0.12s ease;
-        padding: 50px;
-        background-size: cover;
-        background-position: center 1%;
-      }
+    .hero-section {
+      top: 95%;
     }
   }
 }
 
-@media (max-width: 690px) {
+@media (max-width: 1020px) {
   .hero {
     .hero-visual {
       width: 100%;
@@ -223,10 +220,10 @@
       justify-content: center;
     }
     .hero-text {
-      margin-top: 0;
       padding: 10px;
       width: auto;
       left: 50%;
+      top: 5%;
       transform: translateX(-55%);
       text-align: center;
       .ph {
@@ -247,31 +244,113 @@
       padding: 9px 9px 0px 9px;
       gap: 9px;
       flex-wrap: nowrap;
-      overflow-x: auto;
 
       .item {
         display: flex;
         flex-direction: column;
       }
       .hero-btn {
-        padding: 33px;
+        padding: 45px;
       }
       .hero-btn:hover {
         transform: scale(1.1);
-        &.starfire {
-          box-shadow: 0 0 9px rgb(235, 85, 9);
+      }
+    }
+  }
+}
+// MOBILE — Tela de seleção de Titãs (substitui hero-visual)
+.titan-select {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+  box-sizing: border-box;
+
+  .titan-select-title {
+    color: #fff;
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 3px solid #fff;
+    padding-bottom: 8px;
+    margin-bottom: 32px;
+    max-height: 100px;
+    opacity: 1;
+    transition:
+      opacity 0.35s ease,
+      max-height 0.4s ease,
+      margin 0.4s ease;
+
+    &.escondido {
+      opacity: 0;
+      max-height: 0;
+      margin-bottom: 0;
+      border-bottom-color: transparent;
+      overflow: hidden;
+    }
+  }
+
+  .titan-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 480px;
+
+    .titan-card {
+      flex: 0 0 calc(50% - 16px);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      cursor: pointer;
+      transition:
+        flex-basis 0.55s ease,
+        transform 0.55s ease,
+        opacity 0.4s ease,
+        margin 0.55s ease;
+
+      img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        object-position: top center;
+        pointer-events: none;
+      }
+
+      .titan-nome {
+        color: #fff;
+        font-size: 14px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 8px 0;
+        transition: font-size 0.55s ease;
+      }
+    }
+
+    // Modo foco: um personagem só, crescendo no centro
+    &.foco {
+      .titan-card {
+        &:not(.selecionado) {
+          flex-basis: 0%;
+          opacity: 0;
+          margin: 0;
+          pointer-events: none;
         }
-        &.raven {
-          box-shadow: 0 0 9px rgb(1, 11, 120);
-        }
-        &.robin {
-          box-shadow: 0 0 9px rgb(152, 1, 1);
-        }
-        &.cyborg {
-          box-shadow: 0 0 9px rgb(48, 86, 255);
-        }
-        &.beastboy {
-          box-shadow: 0 0 9px rgb(0, 209, 80);
+
+        &.selecionado {
+          flex-basis: 70%;
+          transform: scale(1.05);
+
+          .titan-nome {
+            font-size: 20px;
+          }
         }
       }
     }
