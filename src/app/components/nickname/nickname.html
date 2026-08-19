@@ -1,8 +1,12 @@
-<div class="nicknameClass">
-  <a
-    class="nicknameClass__icon"
-    [style.--bg-color]="titanNick.iconColor"
-    [style.--bg-icon]="'url(' + titanNick.iconUrl + ')'"
-  ></a>
-  <p class="nicknameClass__title">{{ titanNick.name }}</p>
+<div class="align">
+  <div class="about">
+    <div class="title" [style.--border-color]="titanNick.iconColor">
+      <h2>SOBRE O PERSONAGEM</h2>
+    </div>
+  </div>
+  <div class="nicknameClass">
+    <a class="nicknameClass__icon" [style.--bg-color]="titanNick.iconColor"
+      [style.--bg-icon]="'url(' + titanNick.iconUrl + ')'"></a>
+    <p class="nicknameClass__title">{{ titanNick.name }}</p>
+  </div>
 </div>

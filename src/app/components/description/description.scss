@@ -38,3 +38,19 @@
 .card:hover {
   transform: scale(1.015);
 }
+
+@media (max-width: 820px) {
+  .card {
+    width: 90%;
+
+    &__title {
+      margin-left: 8px;
+      font-size: 20px;
+    }
+
+    &__text {
+      margin-left: 3px;
+      font-size: 14px;
+    }
+  }
+}

@@ -129,3 +129,64 @@ a.power {
     transform: scale(1.2);
   }
 }
+@media (max-width: 800px) {
+  .power {
+    .power-title {
+      font-size: 20px;
+    }
+    .power-area {
+      flex-direction: column;
+      min-height: 0;
+      margin: 10px 20px 0px 20px;
+
+      &__media {
+        flex: none;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        overflow: hidden;
+      }
+
+      &__info {
+        flex: none;
+        margin-left: 0;
+        padding: 1.25rem 1.5rem;
+        clip-path: none;
+        align-items: flex-start;
+      }
+
+      &__index {
+        align-self: flex-start;
+        margin-bottom: 0.5rem;
+      }
+
+      &__name {
+        font-size: 18px;
+        margin: 0 0 0.5rem 0;
+      }
+
+      &__description {
+        font-size: 13px;
+        max-width: none;
+        text-align: left;
+        margin-top: 0;
+      }
+    }
+
+    .power-section {
+      margin-top: 30px;
+    }
+    a.power {
+      height: 45px;
+      width: 120px;
+      font-size: 20px;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      &.active {
+        transform: scale(1.1);
+      }
+    }
+  }
+}

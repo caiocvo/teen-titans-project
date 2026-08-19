@@ -62,9 +62,11 @@
     <h1 class="titan-select-title" [class.escondido]="mobileSelecionado">SELECIONE SEU TITÃ</h1>
 
     <div class="titan-grid" [class.foco]="mobileSelecionado">
-      <div class="titan-card" *ngFor="let p of personagens; let i = index" [class.selecionado]="trocaOut === i"
-        [style.background]="p.corPrincipal" (click)="personagemSelecionado(i)">
-        <img [src]="p.img" [alt]="p.nome" />
+      <div class="titan-item" *ngFor="let p of personagens; let i = index" [class.selecionado]="trocaOut === i"
+        (click)="personagemSelecionado(i)">
+        <div class="titan-card" [style.backgroundImage]="'url(' + p.icone + ')'"
+          [style.backgroundColor]="p.corPrincipal">
+        </div>
         <span class="titan-nome">{{ p.nome }}</span>
       </div>
     </div>

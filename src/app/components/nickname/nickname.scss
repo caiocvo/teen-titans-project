@@ -1,25 +1,77 @@
 * {
   font-family: 'Anton', sans-serif;
 }
-.nicknameClass {
-  margin-top: 5%;
+.align {
+  margin-top: 10%;
+  height: 10px;
   display: flex;
-  flex-direction: row-reverse;
-  gap: 23px;
-  &__title {
-    color: rgb(232, 230, 230);
-    font-size: 28px;
-    margin-top: 10px;
+  gap: 10px;
+  justify-content: space-between;
+  padding: 0px 60px 0px 60px;
+  margin-bottom: 8%;
+
+  .nicknameClass {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 23px;
+    width: 200px;
+    margin-top: -10px;
+    &__title {
+      color: rgb(232, 230, 230);
+      font-size: 28px;
+      margin-top: 10px;
+    }
+    &__icon {
+      background-image: var(--bg-icon);
+      background-color: var(--bg-color);
+      transition: all 0.12s ease;
+      width: 60px;
+      height: 60px;
+      border-radius: 50px;
+      background-size: cover;
+      background-position: center 1%;
+      margin-right: 5%;
+    }
   }
-  &__icon {
-    background-image: var(--bg-icon);
-    background-color: var(--bg-color);
-    transition: all 0.12s ease;
-    width: 60px;
-    height: 60px;
-    border-radius: 30px;
-    background-size: cover;
-    background-position: center 1%;
-    margin-right: 5%;
+}
+.about {
+  margin-top: auto;
+  .title {
+    margin-top: auto;
+
+    align-items: flex-start;
+    margin-left: 5%;
+    white-space: nowrap;
+    display: inline-block;
+    border-bottom: solid var(--border-color) 7px;
+
+    h2 {
+      color: rgb(232, 230, 230);
+      font-family: 'Anton', sans-serif;
+    }
+  }
+}
+@media (max-width: 800px) {
+  .align {
+    padding: 0px 20px 0px 20px;
+  }
+  .nicknameClass {
+    &__title {
+      display: none;
+    }
+
+    &__icon {
+      max-width: 45px;
+      max-height: 45px;
+    }
+  }
+
+  .about {
+    .title {
+      border-bottom: solid var(--border-color) 4px;
+      h2 {
+        font-size: 20px;
+      }
+    }
   }
 }
