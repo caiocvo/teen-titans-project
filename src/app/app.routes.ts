@@ -13,7 +13,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/characters',
+    redirectTo: '/home',
     pathMatch: 'full',
   },
 ];

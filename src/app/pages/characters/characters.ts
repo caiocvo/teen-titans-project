@@ -9,7 +9,6 @@ import {
   OnDestroy,
   OnInit,
 } from '@angular/core';
-import { Footer } from '../../components/footer/footer';
 import { InformationService } from './../../services/information/information-service';
 import { Character } from '../../models/character';
 import { CharacterStateService } from '../../services/characterState/character-state-service';
@@ -20,7 +19,7 @@ import { HeroSection } from '../../components/hero-section/hero-section';
 
 @Component({
   selector: 'app-characters',
-  imports: [HeroSection, Footer, Description, Nickname, Powers],
+  imports: [HeroSection, Description, Nickname, Powers],
   templateUrl: './characters.html',
   styleUrl: './characters.scss',
 })
