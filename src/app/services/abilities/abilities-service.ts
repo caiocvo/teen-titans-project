@@ -12,4 +12,8 @@ export class AbilitiesService {
   getAbilities(id: number): Observable<Ability[]> {
     return this.informationService.getCharById(id).pipe(map((character) => character.abilities));
   }
+
+  /* getAllAbilities() {
+    return this.informationService.get;
+  } */
 }

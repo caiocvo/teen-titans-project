@@ -82,4 +82,17 @@ export class Characters implements OnInit, AfterViewInit, OnDestroy {
   ngOnDestroy() {
     this.pageObserver?.disconnect();
   }
+
+  preLoadingImages() {
+    this.informationService.getAllChars().subscribe((data) => {
+      const images = data.char.flatMap((character) =>
+        character.abilities.map((ability) => ability.image),
+      );
+
+      images.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+      });
+    });
+  }
 }

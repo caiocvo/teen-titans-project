@@ -27,4 +27,11 @@ export class InformationService {
       ou seja, basicamente estou dizendo para ele não se preocupar. */
     );
   }
+
+  /*Função usada para conseguir todos os dados da api, porém só interessa as
+  imagens de habiliaddes para fazer o pre-loading */
+
+  getAllChars() {
+    return this.http.get<{ char: Character[] }>(this.api).pipe(first());
+  }
 }

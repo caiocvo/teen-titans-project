@@ -120,6 +120,7 @@ export class HeroSection {
       img.src = src;
     });
   }
+
   personagemSelecionado(index: number) {
     this.personagemAtivo = this.personagens[index];
     this.characterStateService.setPersonagem(index, this.personagens[index].corPrincipal);

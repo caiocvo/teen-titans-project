@@ -27,7 +27,6 @@ export class Powers {
   ngOnInit() {
     /*Apenas para mudar a cor dos botões, reutilizamos o id do personagem ativado no momento
     como posição do vetor colorButton*/
-
     this.characterStateService.idActual$.subscribe((index) => {
       this.idActual = index;
     });
@@ -40,17 +39,23 @@ export class Powers {
       });
   }
 
-  /*Isso é só uma função que recebe um número e guarda ele em abilityActivate. O clique no HTML vai
+  /*Uma função que recebe um número e guarda ele em abilityActivate. O clique no HTML vai
   chamar essa função passando o índice do botão clicado. */
   selectAbility(index: number) {
     this.abilityActivate = index;
   }
 
-  /*Um getter é tipo uma propriedade "calculada" — toda vez que você escreve activeAbility em algum lugar,
+  /*Um getter é como uma propriedade "calculada" — toda vez que você escreve activeAbility em algum lugar,
   o Angular executa essa função e te devolve o resultado atualizado. Isso resolve o problema de inicializar uma variável
   sem receber os dados da API e ser nulo*/
 
   get activeAbility(): Ability | undefined {
     return this.ability?.[this.abilityActivate];
   }
+
+  /*Pré carregamento de imagens */
+
+  /*preLoardingImages(){
+    const images = this.abilitiesService.getAbilities()
+  } */
 }
