@@ -112,6 +112,14 @@ export class HeroSection {
     });
   }
 
+  preLoardingImages() {
+    const images = this.personagens.flatMap((char) => [char.img, char.imgSombra, char.icone]);
+
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }
   personagemSelecionado(index: number) {
     this.personagemAtivo = this.personagens[index];
     this.characterStateService.setPersonagem(index, this.personagens[index].corPrincipal);
