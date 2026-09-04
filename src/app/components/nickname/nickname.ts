@@ -10,18 +10,18 @@ export class Nickname {
   titans = [
     {
       name: 'Estelar',
-      iconUrl: '/backgrounds/icons/starfire-icon.png',
+      iconUrl: '/backgrounds/icons/starfire-icon.webp',
       iconColor: '#ef6d2c',
     },
-    { name: 'Ravena', iconUrl: '/backgrounds/icons/raven-icon.png', iconColor: '#480aa5' },
+    { name: 'Ravena', iconUrl: '/backgrounds/icons/raven-icon.webp', iconColor: '#480aa5' },
 
-    { name: 'Robin', iconUrl: '/backgrounds/icons/robin-icon.png', iconColor: '#af1414' },
+    { name: 'Robin', iconUrl: '/backgrounds/icons/robin-icon.webp', iconColor: '#af1414' },
     {
       name: 'Mutano',
-      iconUrl: '/backgrounds/icons/beastboy-icon.png',
+      iconUrl: '/backgrounds/icons/beastboy-icon.webp',
       iconColor: '#40ba25',
     },
-    { name: 'Cyborg', iconUrl: '/backgrounds/icons/cyborg-icon.png', iconColor: '#317cd2' },
+    { name: 'Cyborg', iconUrl: '/backgrounds/icons/cyborg-icon.webp', iconColor: '#317cd2' },
   ];
 
   constructor(
