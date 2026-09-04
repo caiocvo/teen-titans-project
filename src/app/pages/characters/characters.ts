@@ -83,6 +83,13 @@ export class Characters implements OnInit, AfterViewInit, OnDestroy {
     this.pageObserver?.disconnect();
   }
 
+  /*Fazendo pre loading das imagens de habilidades. Nessa função usamos o método getAllChars em
+  informationService para conseguir ter todas informações dos personagens, mas o que de fato
+  usamos foi os vetores de abilitys em cada objeto.
+  Como o que é retornado dessa função é um Observable, não consigo usar o flatMap, logo,
+  com auxilio do subscribe, guardamos em data. com isso, é possível continuar com a sintaxe
+  de pré loading utilizada em hero-section também.*/
+  
   preLoadingImages() {
     this.informationService.getAllChars().subscribe((data) => {
       const images = data.char.flatMap((character) =>

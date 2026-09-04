@@ -11,25 +11,25 @@
           "id": 1,
           "name": "Voar",
           "text": "A capacidade de voo é uma das habilidades biológicas nativas de Estelar, herdada pelos tamaraneanos.",
-          "image": "/powers/starfire/starfire1.png"
+          "image": "/powers/starfire/starfire1.webp"
         },
         {
           "id": 2,
           "name": "Starbolts",
           "text": "Dispara projéteis de energia verde altamente destrutivos, capazes de causar grandes danos aos inimigos.",
-          "image": "/powers/starfire/starfire2.png"
+          "image": "/powers/starfire/starfire2.webp"
         },
         {
           "id": 3,
           "name": "Força",
           "text": "Seus músculos tamaraneanos suportam cargas muito acima do limite humano, permitindo erguer veículos e até destruir paredes de concreto com um único golpe.",
-          "image": "/powers/starfire/starfire3.png"
+          "image": "/powers/starfire/starfire3.webp"
         },
         {
           "id": 4,
           "name": "Idiomas",
           "text": "Um beijo é o método tamaraneano de transferência de conhecimento, permitindo que Estelar absorva e domine instantaneamente qualquer idioma de quem ela beija.",
-          "image": "/powers/starfire/starfire4.png"
+          "image": "/powers/starfire/starfire4.webp"
         }
       ]
     },
@@ -44,25 +44,25 @@
           "id": 1,
           "name": "Voo",
           "text": "Levitando através de sua energia sombria, Ravena se desloca pelo ar sem qualquer esforço físico.",
-          "image": "/powers/raven/raven1.png"
+          "image": "/powers/raven/raven1.webp"
         },
         {
           "id": 2,
           "name": "Telecinese",
           "text": "Com um simples gesto, move objetos e até inimigos à distância usando apenas o poder da mente.",
-          "image": "/powers/raven/raven3.png"
+          "image": "/powers/raven/raven3.webp"
         },
         {
           "id": 3,
           "name": "Escudo",
           "text": "Uma barreira de energia escura se forma ao seu redor, bloqueando ataques físicos e mágicos antes que a atinjam.",
-          "image": "/powers/raven/raven4.png"
+          "image": "/powers/raven/raven4.webp"
         },
         {
           "id": 4,
           "name": "Ataque",
           "text": "Concentrando sua magia nas mãos, dispara rajadas de energia sombria capazes de derrubar adversários à distância.",
-          "image": "/powers/raven/raven2.png"
+          "image": "/powers/raven/raven2.webp"
         }
       ]
     },
@@ -77,25 +77,25 @@
           "id": 1,
           "name": "Cinto",
           "text": "Seu cinto de utilidades carrega birdarangs, gás de fumaça e diversos outros gadgets prontos para qualquer situação de combate.",
-          "image": "/powers/robin/robin2.png"
+          "image": "/powers/robin/robin2.webp"
         },
         {
           "id": 2,
           "name": "Bastão",
           "text": "Retrátil e versátil, o bastão é sua principal arma corpo a corpo, usado tanto pra atacar quanto pra se deslocar em acrobacias.",
-          "image": "/powers/robin/robin3.png"
+          "image": "/powers/robin/robin3.webp"
         },
         {
           "id": 3,
           "name": "Combate",
           "text": "Anos de treinamento intenso ao lado de Batman o transformaram em um lutador de elite, dominando diversas artes marciais.",
-          "image": "/powers/robin/robin4.png"
+          "image": "/powers/robin/robin4.webp"
         },
         {
           "id": 4,
           "name": "Liderança",
           "text": "À frente da equipe, é ele quem traça as estratégias e mantém os Titãs unidos mesmo nos momentos mais críticos.",
-          "image": "/powers/robin/robin1.png"
+          "image": "/powers/robin/robin1.webp"
         }
       ]
     },
@@ -110,25 +110,25 @@
           "id": 1,
           "name": "Canhão",
           "text": "Seu braço se transforma em um canhão sônico capaz de disparar rajadas de energia concentrada contra os inimigos.",
-          "image": "/powers/cyborg/cyborg1.png"
+          "image": "/powers/cyborg/cyborg1.webp"
         },
         {
           "id": 2,
           "name": "Força",
           "text": "Sendo metade homem, metade robô, seu corpo cibernético suporta impactos e exerce uma força muito acima da capacidade humana.",
-          "image": "/powers/cyborg/cyborg2.png"
+          "image": "/powers/cyborg/cyborg2.webp"
         },
         {
           "id": 3,
           "name": "Upgrade",
           "text": "Peças de seu próprio corpo podem ser reconfiguradas ou aprimoradas, adaptando seu equipamento a cada nova ameaça.",
-          "image": "/powers/cyborg/cyborg3.png"
+          "image": "/powers/cyborg/cyborg3.webp"
         },
         {
           "id": 4,
           "name": "Hacking",
           "text": "Conectando-se diretamente a qualquer sistema, domina softwares e máquinas com uma facilidade que nenhum outro Titã possui.",
-          "image": "/powers/cyborg/cyborg4.png"
+          "image": "/powers/cyborg/cyborg4.webp"
         }
       ]
     },
@@ -143,25 +143,25 @@
           "id": 1,
           "name": "Força",
           "text": "Gorilas, ursos e outros animais robustos emprestam a Mutano uma força física muito superior à de um humano comum.",
-          "image": "/powers/beastboy/beastboy3.png"
+          "image": "/powers/beastboy/beastboy3.webp"
         },
         {
           "id": 2,
           "name": "Voo",
           "text": "Assumindo a forma de um pterodátilo, ele alça voo e ganha visão privilegiada do campo de batalha de cima.",
-          "image": "/powers/beastboy/beastboy4.png"
+          "image": "/powers/beastboy/beastboy4.webp"
         },
         {
           "id": 3,
           "name": "Respiração",
           "text": "Transformando-se em uma baleia, consegue respirar e se mover livremente embaixo d'água, algo impossível em sua forma humana.",
-          "image": "/powers/beastboy/beastboy1.png"
+          "image": "/powers/beastboy/beastboy1.webp"
         },
         {
           "id": 4,
           "name": "Camuflagem",
           "text": "Pequenos animais como ratos e insetos permitem que ele se infiltre em espaços apertados e passe despercebido pelos inimigos.",
-          "image": "/powers/beastboy/beastboy2.png"
+          "image": "/powers/beastboy/beastboy2.webp"
         }
       ]
     }
