@@ -1,0 +1,42 @@
+main {
+  .titans {
+    &-icons {
+      position: relative;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      left: 5%;
+
+      &__btn {
+        position: absolute;
+        width: 96px;
+        height: 96px;
+        background-color: #007bff;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &.robin {
+          transform: rotate(-90deg) translate(100px) rotate(90deg);
+        }
+        &.starfire {
+          transform: rotate(-18deg) translate(100px) rotate(18deg);
+        }
+        &.beastboy {
+          transform: rotate(54deg) translate(100px) rotate(-54deg);
+        }
+        &.raven {
+          transform: rotate(126deg) translate(100px) rotate(-126deg);
+        }
+        &.cyborg {
+          transform: rotate(198deg) translate(100px) rotate(-198deg);
+        }
+      }
+    }
+  }
+}
