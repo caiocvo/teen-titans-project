@@ -1,16 +1,29 @@
 main {
   font-family: 'Anton', sans-serif;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.3px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 0px 20px 0px 20px;
+
+  .top-row {
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+  }
 
   .titans {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 350px;
-    left: 2%;
 
     &-about {
+      a {
+        width: 100%;
+      }
       width: 200px;
       display: flex;
       align-items: center;
@@ -33,6 +46,7 @@ main {
         border-radius: 10px;
       }
     }
+
     &-icons {
       position: relative;
       width: 300px;
@@ -73,7 +87,6 @@ main {
           transform: rotate(126deg) translate(95px) rotate(-126deg);
           background-color: #251779;
           background-image: url('/backgrounds/icons/raven-icon.webp');
-
           background-position: left 7%;
         }
         &.cyborg {
@@ -82,6 +95,109 @@ main {
           background-image: url('/backgrounds/icons/cyborg-icon.webp');
         }
       }
+    }
+  }
+
+  .text-main {
+    flex: 1;
+    text-align: end;
+    max-width: 700px;
+    margin: 10px;
+    color: rgb(172, 172, 172);
+    font-size: 96px;
+    margin-right: 1%;
+    padding-top: 5%;
+  }
+
+  .text-sec {
+    text-align: start;
+    color: rgb(172, 172, 172);
+    max-width: 300px;
+    font-size: 20px;
+    margin-top: auto;
+    margin-left: 2%;
+    margin-bottom: -1%;
+  }
+}
+@media (max-width: 950px) {
+  main {
+    .top-row {
+      gap: 50px;
+      .text-main {
+        font-size: 75px;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  main {
+    display: flex;
+    .top-row {
+      flex-direction: column;
+
+      .titans {
+        .titans-about {
+          text-align: center;
+          button {
+            margin: auto;
+            width: 80%;
+            font-size: 20px;
+          }
+          p {
+            display: none;
+          }
+        }
+      }
+      .text-main {
+        font-size: 35px;
+        max-width: 70%;
+        text-align: center;
+      }
+    }
+
+    .text-sec {
+      margin: auto;
+      max-width: 60%;
+      text-align: center;
+      margin-top: 50px;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  main {
+    .top-row {
+      .titans {
+        &-icons {
+          height: 250px;
+          &__btn {
+            width: 80px;
+            height: 80px;
+            &.robin {
+              transform: rotate(-90deg) translate(75px) rotate(90deg);
+            }
+            &.starfire {
+              transform: rotate(-18deg) translate(75px) rotate(18deg);
+            }
+            &.raven {
+              transform: rotate(126deg) translate(75px) rotate(-126deg);
+            }
+            &.beastboy {
+              transform: rotate(54deg) translate(75px) rotate(-54deg);
+            }
+            &.cyborg {
+              transform: rotate(198deg) translate(75px) rotate(-198deg);
+            }
+          }
+        }
+      }
+    }
+    .text-main {
+      font-size: 30px;
+    }
+    .text-sec {
+      font-size: 15px;
     }
   }
 }

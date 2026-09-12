@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-titans',
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './titans.html',
   styleUrl: './titans.scss',
 })
