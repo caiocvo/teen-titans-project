@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -8,4 +8,13 @@ import { RouterModule } from '@angular/router';
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
-export class Navbar {}
+export class Navbar {
+  @ViewChild('navbarCollapse') navbarCollapse!: ElementRef;
+
+  closeMenu() {
+    const collapseElement = this.navbarCollapse.nativeElement;
+    if (collapseElement.classList.contains('show')) {
+      collapseElement.classList.remove('show');
+    }
+  }
+}

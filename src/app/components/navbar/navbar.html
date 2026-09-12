@@ -1,23 +1,30 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container-fluid">
     <img class="logo" src="logo.jpg" />
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarText"
+      aria-controls="navbarText"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarText">
+    <div class="collapse navbar-collapse" id="navbarText" #navbarCollapse>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" routerLink="home">Home</a>
+          <a class="nav-link" routerLink="home" (click)="closeMenu()">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="characters">Characters</a>
+          <a class="nav-link" routerLink="characters" (click)="closeMenu()">Characters</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="#">Memory Game</a>
+          <a class="nav-link" routerLink="#" (click)="closeMenu()">Memory Game</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" routerLink="#">Quiz</a>
+          <a class="nav-link" routerLink="#" (click)="closeMenu()">Quiz</a>
         </li>
       </ul>
     </div>
