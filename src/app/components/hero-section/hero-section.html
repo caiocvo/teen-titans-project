@@ -1,26 +1,38 @@
-<div #heroRef class="hero" [ngStyle]="{
+<div
+  #heroRef
+  class="hero"
+  [ngStyle]="{
     background: isMobile
       ? '#000'
       : 'linear-gradient(135deg, #000 0%, #000 20%, transparent 52%),' +
         'linear-gradient(45deg, #000 0%, #000 20%, transparent 40%),' +
         personagemHero.corPrincipal,
-  }">
+  }"
+>
   <div #flashRef class="flash"></div>
 
   <!-- DESKTOP -->
   <ng-container *ngIf="!isMobile">
     <div class="hero-visual">
-      <img class="sombra" [src]="personagemHero.imgSombra" [ngStyle]="{
+      <img
+        class="sombra"
+        [src]="personagemHero.imgSombra"
+        [ngStyle]="{
           width: personagemHero.width + '%',
           top: personagemHero.top + '%',
           right: personagemHero.right + '%',
-        }" />
+        }"
+      />
 
-      <img class="personagem" [src]="personagemHero.img" [ngStyle]="{
+      <img
+        class="personagem"
+        [src]="personagemHero.img"
+        [ngStyle]="{
           width: personagemHero.width + '%',
           top: personagemHero.top + '%',
           right: personagemHero.right + '%',
-        }" />
+        }"
+      />
     </div>
 
     <div class="hero-text">
@@ -31,28 +43,53 @@
 
     <div class="hero-section">
       <div class="item">
-        <a class="hero-btn starfire" [class.ativo]="trocaOut === 0" (mouseenter)="trocarPersonagem(0)"
-          (click)="personagemSelecionado(0)" (mouseleave)="trocarPersonagem(trocaOut)"></a>
+        <a
+          class="hero-btn starfire"
+          [class.ativo]="trocaOut === 0"
+          (mouseenter)="trocarPersonagem(0)"
+          (click)="personagemSelecionado(0)"
+          (mouseleave)="trocarPersonagem(trocaOut)"
+        ></a>
       </div>
 
       <div class="item">
-        <a class="hero-btn raven" [class.ativo]="trocaOut === 1" (mouseenter)="trocarPersonagem(1)"
-          (click)="personagemSelecionado(1)" (mouseleave)="trocarPersonagem(trocaOut)"></a>
+        <a
+          class="hero-btn raven"
+          [class.ativo]="trocaOut === 1"
+          (mouseenter)="trocarPersonagem(1)"
+          (click)="personagemSelecionado(1)"
+          (mouseleave)="trocarPersonagem(trocaOut)"
+        ></a>
       </div>
 
       <div class="item">
-        <a class="hero-btn robin" [class.ativo]="trocaOut === 2" (mouseenter)="trocarPersonagem(2)"
-          (click)="personagemSelecionado(2)" (mouseleave)="trocarPersonagem(trocaOut)"></a>
+        <a
+          class="hero-btn robin"
+          [class.ativo]="trocaOut === 2"
+          (mouseenter)="trocarPersonagem(2)"
+          (click)="personagemSelecionado(2)"
+          (mouseleave)="trocarPersonagem(trocaOut)"
+        ></a>
       </div>
 
       <div class="item">
-        <a class="hero-btn cyborg" [class.ativo]="trocaOut === 4" (mouseenter)="trocarPersonagem(4)"
-          (click)="personagemSelecionado(4)" (mouseleave)="trocarPersonagem(trocaOut)"></a>
+        <a
+          class="hero-btn cyborg"
+          [class.ativo]="trocaOut === 4"
+          (mouseenter)="trocarPersonagem(4)"
+          (click)="personagemSelecionado(4)"
+          (mouseleave)="trocarPersonagem(trocaOut)"
+        ></a>
       </div>
 
       <div class="item">
-        <a class="hero-btn beastboy" [class.ativo]="trocaOut === 3" (mouseenter)="trocarPersonagem(3)"
-          (click)="personagemSelecionado(3)" (mouseleave)="trocarPersonagem(trocaOut)"></a>
+        <a
+          class="hero-btn beastboy"
+          [class.ativo]="trocaOut === 3"
+          (mouseenter)="trocarPersonagem(3)"
+          (click)="personagemSelecionado(3)"
+          (mouseleave)="trocarPersonagem(trocaOut)"
+        ></a>
       </div>
     </div>
   </ng-container>
@@ -62,11 +99,17 @@
     <h1 class="titan-select-title" [class.escondido]="mobileSelecionado">SELECIONE SEU TITÃ</h1>
 
     <div class="titan-grid" [class.foco]="mobileSelecionado">
-      <div class="titan-item" *ngFor="let p of personagens; let i = index" [class.selecionado]="trocaOut === i"
-        (click)="personagemSelecionado(i)">
-        <div class="titan-card" [style.backgroundImage]="'url(' + p.icone + ')'"
-          [style.backgroundColor]="p.corPrincipal">
-        </div>
+      <div
+        class="titan-item"
+        *ngFor="let p of personagens; let i = index"
+        [class.selecionado]="trocaOut === i"
+        (click)="personagemSelecionado(i)"
+      >
+        <div
+          class="titan-card"
+          [style.backgroundImage]="'url(' + p.iconeMobile + ')'"
+          [style.backgroundColor]="p.corPrincipal"
+        ></div>
         <span class="titan-nome">{{ p.nome }}</span>
       </div>
     </div>

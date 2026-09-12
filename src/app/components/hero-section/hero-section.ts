@@ -17,6 +17,7 @@ export class HeroSection {
       img: '/backgrounds/characters/starfire.webp',
       imgSombra: 'backgrounds/shadows/sombra.estelar.webp',
       icone: '/backgrounds/icons/starfire-icon.webp',
+      iconeMobile: '/backgrounds/icons/starfire-icon.png',
       corPrincipal: '#D84800',
       corSecundaria: '#6E1F00',
       width: 60,
@@ -29,6 +30,7 @@ export class HeroSection {
         'Filha da humana Arella e do demônio Trigon, Ravena nasceu em Azarath e domina poderes místicos ligados às emoções. Sua sabedoria e autocontrole são essenciais para a equipe.',
       img: '/backgrounds/characters/raven.webp',
       imgSombra: '/backgrounds/shadows/sombra.ravena.webp',
+      iconeMobile: '/backgrounds/icons/raven-icon.png',
       icone: '/backgrounds/icons/raven-icon.webp',
       corPrincipal: '#210776',
       corSecundaria: '#0f044a',
@@ -43,24 +45,12 @@ export class HeroSection {
       img: '/backgrounds/characters/robin.webp',
       imgSombra: '/backgrounds/shadows/sombra.robin.webp',
       icone: '/backgrounds/icons/robin-icon.webp',
+      iconeMobile: '/backgrounds/icons/robin-icon.png',
       corPrincipal: '#5D0000',
       corSecundaria: '#420000',
       width: 75,
       top: -10,
       right: 6,
-    },
-    {
-      nome: 'Mutano',
-      descricao:
-        'Após adquirir a habilidade de se transformar em qualquer animal, Mutano tornou-se o integrante mais irreverente dos Titãs. Seu bom humor esconde uma coragem admirável.',
-      img: '/backgrounds/characters/beastboy.webp',
-      imgSombra: '/backgrounds/shadows/sombra.mutano.webp',
-      icone: '/backgrounds/icons/beastboy-icon.webp',
-      corPrincipal: '#0B4400',
-      corSecundaria: '#051C00',
-      width: 60,
-      top: 8,
-      right: 4,
     },
     {
       nome: 'Cyborg',
@@ -69,8 +59,24 @@ export class HeroSection {
       img: '/backgrounds/characters/cyborg.webp',
       imgSombra: '/backgrounds/shadows/sombra.cyborg.webp',
       icone: '/backgrounds/icons/cyborg-icon.webp',
+      iconeMobile: '/backgrounds/icons/cyborg-icon.png',
+
       corPrincipal: '#004798',
       corSecundaria: '#003A7C',
+      width: 60,
+      top: 8,
+      right: 4,
+    },
+    {
+      nome: 'Mutano',
+      descricao:
+        'Após adquirir a habilidade de se transformar em qualquer animal, Mutano tornou-se o integrante mais irreverente dos Titãs. Seu bom humor esconde uma coragem admirável.',
+      img: '/backgrounds/characters/beastboy.webp',
+      imgSombra: '/backgrounds/shadows/sombra.mutano.webp',
+      icone: '/backgrounds/icons/beastboy-icon.webp',
+      iconeMobile: '/backgrounds/icons/beastboy-icon.png',
+      corPrincipal: '#22811B',
+      corSecundaria: '#051C00',
       width: 60,
       top: 8,
       right: 4,
@@ -113,7 +119,12 @@ export class HeroSection {
   }
 
   preLoardingImages() {
-    const images = this.personagens.flatMap((char) => [char.img, char.imgSombra, char.icone]);
+    const images = this.personagens.flatMap((char) => [
+      char.img,
+      char.imgSombra,
+      char.iconeMobile,
+      char.icone,
+    ]);
 
     images.forEach((src) => {
       const img = new Image();
