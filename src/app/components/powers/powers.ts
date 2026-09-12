@@ -15,7 +15,7 @@ export class Powers {
   char?: Character;
   ability?: Ability[]; //Array de habilidades de todo o personagem
   idActual = 2;
-  colorsButton = ['#ff2f00', '#24005b', '#e80000', '#1b9100', '#0059bf'];
+  colorsButton = ['#ff2f00', '#24005b', '#e80000', '#0059bf', '#1b9100'];
   abilityActivate = 1; //Index do array de habilidades
 
   constructor(

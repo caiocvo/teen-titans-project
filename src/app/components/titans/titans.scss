@@ -40,10 +40,16 @@ main {
         height: 49px;
         margin-bottom: 10px;
         font-size: 25px;
-        color: white;
+        color: rgb(215, 215, 215);
         background-color: #009043;
         border: none;
+        transition: all ease 0.5s;
         border-radius: 10px;
+      }
+      button:hover {
+        color: white;
+        transform: scale(1.1);
+        background-color: #11c13a;
       }
     }
 
@@ -70,28 +76,28 @@ main {
 
         &.robin {
           transform: rotate(-90deg) translate(95px) rotate(90deg);
-          background-color: #a10c0c;
+          background-color: #e12828;
           background-image: url('/backgrounds/icons/robin-icon.webp');
         }
         &.starfire {
           transform: rotate(-18deg) translate(95px) rotate(18deg);
-          background-color: #ff6427;
+          background-color: #ff5918;
           background-image: url('/backgrounds/icons/starfire-icon.webp');
         }
         &.beastboy {
           transform: rotate(54deg) translate(95px) rotate(-54deg);
-          background-color: #22811b;
+          background-color: #38bc2e;
           background-image: url('/backgrounds/icons/beastboy-icon.webp');
         }
         &.raven {
           transform: rotate(126deg) translate(95px) rotate(-126deg);
-          background-color: #251779;
+          background-color: #3e2ca5;
           background-image: url('/backgrounds/icons/raven-icon.webp');
           background-position: left 7%;
         }
         &.cyborg {
           transform: rotate(198deg) translate(95px) rotate(-198deg);
-          background-color: #007bff;
+          background-color: #2e86e3;
           background-image: url('/backgrounds/icons/cyborg-icon.webp');
         }
       }

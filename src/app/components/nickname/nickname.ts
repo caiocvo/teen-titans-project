@@ -16,12 +16,13 @@ export class Nickname {
     { name: 'Ravena', iconUrl: '/backgrounds/icons/raven-icon.webp', iconColor: '#480aa5' },
 
     { name: 'Robin', iconUrl: '/backgrounds/icons/robin-icon.webp', iconColor: '#af1414' },
+    { name: 'Cyborg', iconUrl: '/backgrounds/icons/cyborg-icon.webp', iconColor: '#317cd2' },
+
     {
       name: 'Mutano',
       iconUrl: '/backgrounds/icons/beastboy-icon.webp',
       iconColor: '#40ba25',
     },
-    { name: 'Cyborg', iconUrl: '/backgrounds/icons/cyborg-icon.webp', iconColor: '#317cd2' },
   ];
 
   constructor(
