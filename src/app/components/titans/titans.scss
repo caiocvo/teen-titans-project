@@ -20,39 +20,6 @@ main {
     align-items: center;
     flex-direction: column;
 
-    &-about {
-      a {
-        width: 100%;
-      }
-      width: 200px;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      p {
-        margin: auto;
-        text-align: center;
-        font-size: 23px;
-        color: rgb(172, 172, 172);
-      }
-      button {
-        margin: 0;
-        width: 100%;
-        height: 49px;
-        margin-bottom: 10px;
-        font-size: 25px;
-        color: rgb(215, 215, 215);
-        background-color: #009043;
-        border: none;
-        transition: all ease 0.5s;
-        border-radius: 10px;
-      }
-      button:hover {
-        color: white;
-        transform: scale(1.1);
-        background-color: #11c13a;
-      }
-    }
-
     &-icons {
       position: relative;
       width: 300px;
@@ -76,28 +43,28 @@ main {
 
         &.robin {
           transform: rotate(-90deg) translate(95px) rotate(90deg);
-          background-color: #e12828;
+          background-color: #fdf552;
           background-image: url('/backgrounds/icons/robin-icon.webp');
         }
         &.starfire {
           transform: rotate(-18deg) translate(95px) rotate(18deg);
-          background-color: #ff5918;
+          background-color: #f765f7;
           background-image: url('/backgrounds/icons/starfire-icon.webp');
         }
         &.beastboy {
           transform: rotate(54deg) translate(95px) rotate(-54deg);
-          background-color: #38bc2e;
+          background-color: #5fff53;
           background-image: url('/backgrounds/icons/beastboy-icon.webp');
         }
         &.raven {
           transform: rotate(126deg) translate(95px) rotate(-126deg);
-          background-color: #3e2ca5;
+          background-color: #7a62ff;
           background-image: url('/backgrounds/icons/raven-icon.webp');
           background-position: left 7%;
         }
         &.cyborg {
           transform: rotate(198deg) translate(95px) rotate(-198deg);
-          background-color: #2e86e3;
+          background-color: #f56363;
           background-image: url('/backgrounds/icons/cyborg-icon.webp');
         }
       }
@@ -109,7 +76,7 @@ main {
     text-align: end;
     max-width: 700px;
     margin: 10px;
-    color: rgb(172, 172, 172);
+    color: rgb(220, 220, 220);
     font-size: 96px;
     margin-right: 1%;
     padding-top: 5%;
@@ -128,7 +95,6 @@ main {
 @media (max-width: 950px) {
   main {
     .top-row {
-      gap: 50px;
       .text-main {
         font-size: 75px;
       }
@@ -141,23 +107,9 @@ main {
     display: flex;
     .top-row {
       flex-direction: column;
-
-      .titans {
-        .titans-about {
-          text-align: center;
-          button {
-            margin: auto;
-            width: 80%;
-            font-size: 20px;
-          }
-          p {
-            display: none;
-          }
-        }
-      }
       .text-main {
         font-size: 35px;
-        max-width: 70%;
+        max-width: 60%;
         text-align: center;
       }
     }
@@ -178,30 +130,31 @@ main {
         &-icons {
           height: 250px;
           &__btn {
-            width: 80px;
-            height: 80px;
+            width: 75px;
+            height: 75px;
             &.robin {
-              transform: rotate(-90deg) translate(75px) rotate(90deg);
+              transform: rotate(-90deg) translate(70px) rotate(90deg);
             }
             &.starfire {
-              transform: rotate(-18deg) translate(75px) rotate(18deg);
+              transform: rotate(-18deg) translate(70px) rotate(18deg);
             }
             &.raven {
-              transform: rotate(126deg) translate(75px) rotate(-126deg);
+              transform: rotate(126deg) translate(70px) rotate(-126deg);
             }
             &.beastboy {
-              transform: rotate(54deg) translate(75px) rotate(-54deg);
+              transform: rotate(54deg) translate(70px) rotate(-54deg);
             }
             &.cyborg {
-              transform: rotate(198deg) translate(75px) rotate(-198deg);
+              transform: rotate(198deg) translate(70px) rotate(-198deg);
             }
           }
         }
       }
+      .text-main {
+        font-size: 29px;
+      }
     }
-    .text-main {
-      font-size: 30px;
-    }
+
     .text-sec {
       font-size: 15px;
     }

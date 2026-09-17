@@ -1,11 +1,11 @@
 import { Component, Input, Output, EventEmitter, OnInit, ChangeDetectorRef } from '@angular/core';
-import { Lading } from '../../components/lading/lading';
+import { Landing } from '../../components/landing/landing';
 import { Titans } from '../../components/titans/titans';
 import { Powers } from '../../components/powers/powers';
 
 @Component({
   selector: 'app-home',
-  imports: [Lading, Titans, Powers],
+  imports: [Landing, Titans],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
